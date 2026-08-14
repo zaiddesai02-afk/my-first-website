@@ -8,12 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Professional, modern and mobile-friendly websites for businesses and individuals.">
+        content="ZaidWeb creates modern, professional and mobile-friendly websites for businesses and individuals.">
 
-    <title>Zaid Web Design | Professional Websites</title>
+    <title>ZaidWeb | Professional Websites</title>
 
 
     <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
 
         * {
             margin: 0;
@@ -26,6 +30,7 @@
         }
 
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
             line-height: 1.6;
             background: #f8fafc;
@@ -41,9 +46,14 @@
             display: block;
         }
 
+        section {
+            padding: 90px 7%;
+            scroll-margin-top: 90px;
+        }
+
 
         /* =========================
-           NAVBAR
+           NAVIGATION
         ========================= */
 
         nav {
@@ -307,20 +317,15 @@
 
 
         /* =========================
-           GENERAL SECTIONS
+           SECTION TITLES
         ========================= */
-
-        section {
-            padding: 90px 7%;
-        }
 
         .section-title {
             text-align: center;
 
             max-width: 700px;
 
-            margin:
-                0 auto 55px;
+            margin: 0 auto 55px;
         }
 
         .section-title h2 {
@@ -423,17 +428,25 @@
             box-shadow:
                 0 8px 25px
                 rgba(15, 23, 42, 0.05);
+
+            transition: 0.3s;
         }
 
-        .portfolio-image {
-            height: 190px;
+        .portfolio-card:hover {
+            transform: translateY(-5px);
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #dbeafe,
-                    #eff6ff
-                );
+            box-shadow:
+                0 15px 35px
+                rgba(15, 23, 42, 0.10);
+        }
+
+
+        /* WEBSITE PREVIEW */
+
+        .portfolio-image {
+            height: 220px;
+
+            padding: 20px;
 
             display: flex;
 
@@ -441,19 +454,111 @@
 
             justify-content: center;
 
-            color: #2563eb;
+            background: #eaf2ff;
 
-            font-size: 22px;
+            position: relative;
 
-            font-weight: 800;
+            overflow: hidden;
         }
 
+        .website-preview {
+            width: 90%;
+
+            height: 165px;
+
+            background: white;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(15, 23, 42, 0.15);
+
+            overflow: hidden;
+        }
+
+        .preview-top {
+            height: 25px;
+
+            background: #f1f5f9;
+
+            display: flex;
+
+            align-items: center;
+
+            padding-left: 10px;
+
+            gap: 5px;
+        }
+
+        .preview-dot {
+            width: 7px;
+
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: #94a3b8;
+        }
+
+        .preview-body {
+            padding: 18px;
+        }
+
+        .preview-title {
+            height: 12px;
+
+            width: 55%;
+
+            background: #2563eb;
+
+            border-radius: 5px;
+
+            margin-bottom: 10px;
+        }
+
+        .preview-text {
+            height: 7px;
+
+            width: 80%;
+
+            background: #d1d5db;
+
+            border-radius: 5px;
+
+            margin-bottom: 7px;
+        }
+
+        .preview-boxes {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 7px;
+
+            margin-top: 18px;
+        }
+
+        .preview-box {
+            height: 45px;
+
+            background: #dbeafe;
+
+            border-radius: 5px;
+        }
+
+
+        /* PORTFOLIO INFORMATION */
+
         .portfolio-info {
-            padding: 22px;
+            padding: 24px;
         }
 
         .portfolio-info h3 {
             margin-bottom: 8px;
+
+            font-size: 21px;
         }
 
         .portfolio-info p {
@@ -461,7 +566,7 @@
 
             font-size: 14px;
 
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .demo-label {
@@ -473,11 +578,33 @@
 
             color: #2563eb;
 
-            padding: 5px 9px;
+            padding: 7px 10px;
 
             border-radius: 5px;
 
             font-weight: 700;
+        }
+
+        .view-project {
+            display: inline-block;
+
+            padding: 10px 15px;
+
+            background: #2563eb;
+
+            color: white;
+
+            border-radius: 7px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .view-project:hover {
+            background: #1d4ed8;
         }
 
 
@@ -629,7 +756,7 @@
         }
 
         .price {
-            font-size: 30px;
+            font-size: 25px;
 
             font-weight: 800;
 
@@ -720,6 +847,10 @@
             margin-top: 10px;
         }
 
+        .whatsapp-big:hover {
+            opacity: 0.9;
+        }
+
 
         /* =========================
            FORM
@@ -735,7 +866,6 @@
 
         form input,
         form textarea {
-
             width: 100%;
 
             padding: 14px;
@@ -753,14 +883,12 @@
         }
 
         form textarea {
-
             min-height: 130px;
 
             resize: vertical;
         }
 
         form button {
-
             width: 100%;
 
             border: none;
@@ -776,7 +904,6 @@
         ========================= */
 
         footer {
-
             background: #0b1120;
 
             color: #94a3b8;
@@ -792,7 +919,6 @@
         ========================= */
 
         .floating-whatsapp {
-
             position: fixed;
 
             right: 20px;
@@ -814,6 +940,12 @@
             box-shadow:
                 0 8px 25px
                 rgba(0, 0, 0, 0.2);
+
+            transition: 0.3s;
+        }
+
+        .floating-whatsapp:hover {
+            transform: translateY(-3px);
         }
 
 
@@ -824,20 +956,15 @@
         @media (max-width: 850px) {
 
             nav {
-
-                padding:
-                    15px 5%;
+                padding: 15px 5%;
             }
 
             .nav-links {
-
                 display: none;
             }
 
             .hero {
-
-                padding:
-                    75px 5%;
+                padding: 75px 5%;
 
                 flex-direction: column;
 
@@ -845,58 +972,54 @@
             }
 
             .hero p {
-
                 margin-left: auto;
 
                 margin-right: auto;
             }
 
             .buttons {
-
                 justify-content: center;
             }
 
             .service-grid,
             .portfolio-grid,
             .pricing-grid {
-
                 grid-template-columns: 1fr;
             }
 
             .about-container,
             .contact-container {
-
                 grid-template-columns: 1fr;
             }
 
             .price-card.featured {
-
                 transform: none;
             }
 
             section {
+                padding: 70px 5%;
 
-                padding:
-                    70px 5%;
+                scroll-margin-top: 70px;
             }
 
             .section-title h2,
             .about-text h2,
             .contact-info h2 {
-
                 font-size: 34px;
             }
 
             .hero-card {
-
                 width: 100%;
             }
 
             .floating-whatsapp {
-
                 right: 15px;
 
                 bottom: 15px;
+            }
+
+            .portfolio-image {
+                height: 210px;
             }
 
         }
@@ -916,9 +1039,7 @@
     <nav>
 
         <a href="#home" class="logo">
-
             Zaid<span>Web</span>
-
         </a>
 
 
@@ -944,11 +1065,8 @@
                 Pricing
             </a>
 
-            <a href="#contact"
-               class="nav-button">
-
+            <a href="#contact" class="nav-button">
                 Contact
-
             </a>
 
         </div>
@@ -961,18 +1079,14 @@
          HERO
     ========================= -->
 
-    <section
-        class="hero"
-        id="home">
+    <section class="hero" id="home">
 
 
         <div class="hero-content">
 
 
             <div class="small-title">
-
                 PROFESSIONAL WEB DESIGN
-
             </div>
 
 
@@ -1080,9 +1194,7 @@
          SERVICES
     ========================= -->
 
-    <section
-        class="services"
-        id="services">
+    <section class="services" id="services">
 
 
         <div class="section-title">
@@ -1230,9 +1342,7 @@
          PORTFOLIO
     ========================= -->
 
-    <section
-        class="portfolio"
-        id="portfolio">
+    <section class="portfolio" id="portfolio">
 
 
         <div class="section-title">
@@ -1242,9 +1352,8 @@
             </h2>
 
             <p>
-                A few website concepts and projects.
-                More projects can be added as your
-                portfolio grows.
+                Website concepts and projects created
+                with modern, responsive designs.
             </p>
 
         </div>
@@ -1254,31 +1363,77 @@
         <div class="portfolio-grid">
 
 
+            <!-- BUSINESS WEBSITE -->
+
             <div class="portfolio-card">
 
 
                 <div class="portfolio-image">
 
-                    BUSINESS WEBSITE
+
+                    <div class="website-preview">
+
+
+                        <div class="preview-top">
+
+                            <div class="preview-dot"></div>
+
+                            <div class="preview-dot"></div>
+
+                            <div class="preview-dot"></div>
+
+                        </div>
+
+
+                        <div class="preview-body">
+
+
+                            <div class="preview-title"></div>
+
+                            <div class="preview-text"></div>
+
+                            <div class="preview-text"></div>
+
+
+                            <div class="preview-boxes">
+
+                                <div class="preview-box"></div>
+
+                                <div class="preview-box"></div>
+
+                                <div class="preview-box"></div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
 
                 </div>
 
 
+
                 <div class="portfolio-info">
+
 
                     <h3>
                         Business Website
                     </h3>
 
+
                     <p>
-                        A clean and professional
-                        website concept for a local
-                        business.
+                        Modern website design for a
+                        small business or local company.
                     </p>
+
 
                     <span class="demo-label">
                         DEMO PROJECT
                     </span>
+
 
                 </div>
 
@@ -1287,30 +1442,77 @@
 
 
 
+            <!-- RESTAURANT WEBSITE -->
+
             <div class="portfolio-card">
 
 
                 <div class="portfolio-image">
 
-                    RESTAURANT WEBSITE
+
+                    <div class="website-preview">
+
+
+                        <div class="preview-top">
+
+                            <div class="preview-dot"></div>
+
+                            <div class="preview-dot"></div>
+
+                            <div class="preview-dot"></div>
+
+                        </div>
+
+
+                        <div class="preview-body">
+
+
+                            <div class="preview-title"></div>
+
+                            <div class="preview-text"></div>
+
+                            <div class="preview-text"></div>
+
+
+                            <div class="preview-boxes">
+
+                                <div class="preview-box"></div>
+
+                                <div class="preview-box"></div>
+
+                                <div class="preview-box"></div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
 
                 </div>
 
 
+
                 <div class="portfolio-info">
+
 
                     <h3>
                         Restaurant Website
                     </h3>
 
+
                     <p>
-                        A modern website concept
-                        for a restaurant or cafe.
+                        Clean and attractive website
+                        concept for a restaurant or cafe.
                     </p>
+
 
                     <span class="demo-label">
                         DEMO PROJECT
                     </span>
+
 
                 </div>
 
@@ -1319,30 +1521,161 @@
 
 
 
+            <!-- PERSONAL WEBSITE -->
+
             <div class="portfolio-card">
 
 
                 <div class="portfolio-image">
 
-                    PERSONAL BRAND
+
+                    <div class="website-preview">
+
+
+                        <div class="preview-top">
+
+                            <div class="preview-dot"></div>
+
+                            <div class="preview-dot"></div>
+
+                            <div class="preview-dot"></div>
+
+                        </div>
+
+
+                        <div class="preview-body">
+
+
+                            <div class="preview-title"></div>
+
+                            <div class="preview-text"></div>
+
+                            <div class="preview-text"></div>
+
+
+                            <div class="preview-boxes">
+
+                                <div class="preview-box"></div>
+
+                                <div class="preview-box"></div>
+
+                                <div class="preview-box"></div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
 
                 </div>
 
 
+
                 <div class="portfolio-info">
+
 
                     <h3>
                         Personal Website
                     </h3>
 
+
                     <p>
-                        A professional online presence
+                        Professional website concept
                         for a freelancer or creator.
                     </p>
+
 
                     <span class="demo-label">
                         DEMO PROJECT
                     </span>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- REAL ZAIDWEB PROJECT -->
+
+            <div class="portfolio-card">
+
+
+                <div class="portfolio-image">
+
+
+                    <div class="website-preview">
+
+
+                        <div class="preview-top">
+
+                            <div class="preview-dot"></div>
+
+                            <div class="preview-dot"></div>
+
+                            <div class="preview-dot"></div>
+
+                        </div>
+
+
+                        <div class="preview-body">
+
+
+                            <div class="preview-title"></div>
+
+                            <div class="preview-text"></div>
+
+                            <div class="preview-text"></div>
+
+
+                            <div class="preview-boxes">
+
+                                <div class="preview-box"></div>
+
+                                <div class="preview-box"></div>
+
+                                <div class="preview-box"></div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="portfolio-info">
+
+
+                    <h3>
+                        ZaidWeb
+                    </h3>
+
+
+                    <p>
+                        My own professional web-design
+                        business website.
+                    </p>
+
+
+                    <a
+                        href="https://zaiddesai02-afk.github.io/my-first-website/"
+                        target="_blank"
+                        class="view-project">
+
+                        View Website
+
+                    </a>
+
 
                 </div>
 
@@ -1361,18 +1694,14 @@
          ABOUT
     ========================= -->
 
-    <section
-        class="about"
-        id="about">
+    <section class="about" id="about">
 
 
         <div class="about-container">
 
 
             <div class="about-image">
-
                 Z
-
             </div>
 
 
@@ -1443,9 +1772,7 @@
          PRICING
     ========================= -->
 
-    <section
-        class="pricing"
-        id="pricing">
+    <section class="pricing" id="pricing">
 
 
         <div class="section-title">
@@ -1470,6 +1797,8 @@
 
         <div class="pricing-grid">
 
+
+            <!-- STARTER -->
 
             <div class="price-card">
 
@@ -1526,14 +1855,13 @@
 
 
 
-            <div
-                class="price-card featured">
+            <!-- BUSINESS -->
+
+            <div class="price-card featured">
 
 
                 <span class="popular">
-
                     POPULAR
-
                 </span>
 
 
@@ -1543,9 +1871,7 @@
 
 
                 <div class="price">
-
                     Contact for Price
-
                 </div>
 
 
@@ -1595,6 +1921,8 @@
 
 
 
+            <!-- CUSTOM -->
+
             <div class="price-card">
 
 
@@ -1604,9 +1932,7 @@
 
 
                 <div class="price">
-
                     Let's Talk
-
                 </div>
 
 
@@ -1662,9 +1988,7 @@
          CONTACT
     ========================= -->
 
-    <section
-        class="contact"
-        id="contact">
+    <section class="contact" id="contact">
 
 
         <div class="contact-container">
@@ -1759,7 +2083,7 @@
 
         <p>
 
-            © 2026 Zaid Web Design.
+            © 2026 ZaidWeb.
             All rights reserved.
 
         </p>
