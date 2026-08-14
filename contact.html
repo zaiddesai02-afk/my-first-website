@@ -113,7 +113,7 @@
         </p>
 
 
-        <form action="https://formspree.io/f/mljrlzke" method="POST">
+        <form onsubmit="sendToWhatsApp(event)">
 
     <input
         type="text"
@@ -123,9 +123,9 @@
     >
 
     <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
+        type="text"
+        id="business"
+        placeholder="Business / Website Type"
         required
     >
 
@@ -135,14 +135,8 @@
         required
     ></textarea>
 
-    <input
-        type="hidden"
-        name="subject"
-        value="New Website Inquiry"
-    >
-
     <button type="submit">
-        Send Message
+        Send on WhatsApp
     </button>
 
 </form>
@@ -165,13 +159,23 @@
 
             event.preventDefault();
 
-            let name =
+            const name =
                 document.getElementById("name").value;
 
-            alert(
-                "Thank you, " +
-                name +
-                "! I received your message."
+            const business =
+                document.getElementById("business").value;
+
+            const message =
+                document.querySelector('textarea[name="message"]').value;
+
+            const whatsappMessage =
+                "Hello Zaid!%0A%0AName: " + encodeURIComponent(name) +
+                "%0ABusiness / Website Type: " + encodeURIComponent(business) +
+                "%0A%0AProject details:%0A" + encodeURIComponent(message);
+
+            window.open(
+                "https://wa.me/918548813585?text=" + whatsappMessage,
+                "_blank"
             );
 
         }
