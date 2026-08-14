@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
         content="Professional, modern and mobile-friendly websites for businesses and individuals.">
 
     <title>Zaid Web Design | Professional Websites</title>
+
 
     <style>
 
@@ -39,6 +41,7 @@
             display: block;
         }
 
+
         /* =========================
            NAVBAR
         ========================= */
@@ -47,9 +50,13 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255,255,255,0.96);
+
+            background: rgba(255, 255, 255, 0.97);
+
             border-bottom: 1px solid #e5e7eb;
+
             padding: 18px 7%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -88,18 +95,27 @@
             border-radius: 8px;
         }
 
+
         /* =========================
            HERO
         ========================= */
 
         .hero {
             min-height: 680px;
+
             padding: 100px 7%;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             gap: 60px;
-            background: linear-gradient(135deg, #eff6ff, #ffffff);
+
+            background: linear-gradient(
+                135deg,
+                #eff6ff,
+                #ffffff
+            );
         }
 
         .hero-content {
@@ -108,16 +124,23 @@
 
         .small-title {
             color: #2563eb;
+
             font-size: 15px;
+
             font-weight: 800;
+
             letter-spacing: 2px;
+
             margin-bottom: 18px;
         }
 
         .hero h1 {
             font-size: clamp(42px, 6vw, 72px);
+
             line-height: 1.05;
+
             margin-bottom: 25px;
+
             color: #111827;
         }
 
@@ -127,38 +150,55 @@
 
         .hero p {
             font-size: 20px;
+
             color: #4b5563;
+
             max-width: 600px;
+
             margin-bottom: 32px;
         }
 
         .buttons {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 15px;
         }
 
         .button {
             display: inline-block;
+
             padding: 15px 25px;
+
             border-radius: 9px;
+
             font-weight: 700;
+
             transition: 0.3s;
+
+            cursor: pointer;
         }
 
         .primary {
             background: #2563eb;
+
             color: white;
+
+            border: none;
         }
 
         .primary:hover {
             background: #1d4ed8;
+
             transform: translateY(-2px);
         }
 
         .secondary {
             border: 2px solid #2563eb;
+
             color: #2563eb;
+
             background: white;
         }
 
@@ -166,69 +206,108 @@
             background: #eff6ff;
         }
 
+
+        /* =========================
+           HERO WEBSITE PREVIEW
+        ========================= */
+
         .hero-card {
             width: 420px;
+
             max-width: 100%;
+
             background: white;
+
             border-radius: 20px;
+
             padding: 30px;
-            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+
+            box-shadow:
+                0 20px 60px
+                rgba(15, 23, 42, 0.12);
         }
 
         .browser {
             border: 1px solid #e5e7eb;
+
             border-radius: 12px;
+
             overflow: hidden;
         }
 
         .browser-top {
             padding: 12px;
+
             background: #f1f5f9;
+
             display: flex;
+
             gap: 6px;
         }
 
         .dot {
             width: 10px;
+
             height: 10px;
+
             border-radius: 50%;
+
             background: #94a3b8;
         }
 
         .browser-content {
             padding: 30px 20px;
+
             min-height: 240px;
-            background: linear-gradient(160deg, #dbeafe, #ffffff);
+
+            background:
+                linear-gradient(
+                    160deg,
+                    #dbeafe,
+                    #ffffff
+                );
         }
 
         .fake-line {
             height: 12px;
+
             background: #2563eb;
+
             width: 55%;
+
             border-radius: 10px;
+
             margin-bottom: 15px;
         }
 
         .fake-line.small {
             width: 80%;
+
             background: #cbd5e1;
         }
 
         .fake-boxes {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 10px;
+
             margin-top: 30px;
         }
 
         .fake-box {
             height: 70px;
+
             border-radius: 8px;
+
             background: #e2e8f0;
         }
 
+
         /* =========================
-           GENERAL SECTION
+           GENERAL SECTIONS
         ========================= */
 
         section {
@@ -237,20 +316,27 @@
 
         .section-title {
             text-align: center;
+
             max-width: 700px;
-            margin: 0 auto 55px;
+
+            margin:
+                0 auto 55px;
         }
 
         .section-title h2 {
             font-size: 42px;
+
             margin-bottom: 12px;
+
             color: #111827;
         }
 
         .section-title p {
             color: #6b7280;
+
             font-size: 17px;
         }
+
 
         /* =========================
            SERVICES
@@ -262,36 +348,50 @@
 
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
         }
 
         .service-card {
             padding: 35px 28px;
-            border: 1px solid #e5e7eb;
+
+            border:
+                1px solid #e5e7eb;
+
             border-radius: 16px;
+
             background: white;
+
             transition: 0.3s;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(15,23,42,0.08);
+
+            box-shadow:
+                0 15px 35px
+                rgba(15, 23, 42, 0.08);
         }
 
         .icon {
             font-size: 38px;
+
             margin-bottom: 18px;
         }
 
         .service-card h3 {
             margin-bottom: 10px;
+
             font-size: 22px;
         }
 
         .service-card p {
             color: #6b7280;
         }
+
 
         /* =========================
            PORTFOLIO
@@ -303,26 +403,48 @@
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
         }
 
         .portfolio-card {
             background: white;
+
             border-radius: 16px;
+
             overflow: hidden;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 8px 25px rgba(15,23,42,0.05);
+
+            border:
+                1px solid #e5e7eb;
+
+            box-shadow:
+                0 8px 25px
+                rgba(15, 23, 42, 0.05);
         }
 
         .portfolio-image {
             height: 190px;
-            background: linear-gradient(135deg, #dbeafe, #eff6ff);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dbeafe,
+                    #eff6ff
+                );
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             color: #2563eb;
+
             font-size: 22px;
+
             font-weight: 800;
         }
 
@@ -336,19 +458,28 @@
 
         .portfolio-info p {
             color: #6b7280;
+
             font-size: 14px;
+
             margin-bottom: 15px;
         }
 
         .demo-label {
             display: inline-block;
+
             font-size: 12px;
+
             background: #eff6ff;
+
             color: #2563eb;
+
             padding: 5px 9px;
+
             border-radius: 5px;
+
             font-weight: 700;
         }
+
 
         /* =========================
            ABOUT
@@ -360,50 +491,78 @@
 
         .about-container {
             max-width: 1000px;
+
             margin: auto;
+
             display: grid;
-            grid-template-columns: 1fr 1fr;
+
+            grid-template-columns:
+                1fr 1fr;
+
             gap: 50px;
+
             align-items: center;
         }
 
         .about-image {
             min-height: 350px;
+
             border-radius: 20px;
-            background: linear-gradient(135deg, #2563eb, #1e40af);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #1e40af
+                );
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             color: white;
+
             font-size: 80px;
+
+            font-weight: 800;
         }
 
         .about-text h2 {
             font-size: 40px;
+
             margin-bottom: 20px;
         }
 
         .about-text p {
             color: #6b7280;
+
             margin-bottom: 18px;
         }
 
         .check-list {
             list-style: none;
+
             margin-top: 20px;
         }
 
         .check-list li {
             margin-bottom: 12px;
+
             font-weight: 600;
         }
 
         .check-list li::before {
             content: "✓";
+
             color: #2563eb;
+
             margin-right: 10px;
+
             font-weight: 900;
         }
+
 
         /* =========================
            PRICING
@@ -415,55 +574,81 @@
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
+
             max-width: 1100px;
+
             margin: auto;
         }
 
         .price-card {
             background: white;
-            border: 1px solid #e5e7eb;
+
+            border:
+                1px solid #e5e7eb;
+
             border-radius: 16px;
+
             padding: 32px;
         }
 
         .price-card.featured {
-            border: 2px solid #2563eb;
-            transform: translateY(-8px);
+            border:
+                2px solid #2563eb;
+
+            transform:
+                translateY(-8px);
         }
 
         .popular {
             display: inline-block;
+
             background: #2563eb;
+
             color: white;
+
             padding: 5px 10px;
+
             font-size: 12px;
+
             font-weight: 700;
+
             border-radius: 5px;
+
             margin-bottom: 15px;
         }
 
         .price-card h3 {
             font-size: 24px;
+
             margin-bottom: 10px;
         }
 
         .price {
-            font-size: 32px;
+            font-size: 30px;
+
             font-weight: 800;
+
             color: #2563eb;
+
             margin: 15px 0;
         }
 
         .price-note {
             color: #6b7280;
+
             font-size: 14px;
+
             margin-bottom: 20px;
         }
 
         .price-card ul {
             list-style: none;
+
             margin-bottom: 25px;
         }
 
@@ -473,10 +658,14 @@
 
         .price-card li::before {
             content: "✓";
+
             color: #2563eb;
+
             margin-right: 8px;
+
             font-weight: bold;
         }
+
 
         /* =========================
            CONTACT
@@ -484,94 +673,149 @@
 
         .contact {
             background: #111827;
+
             color: white;
         }
 
         .contact-container {
             max-width: 900px;
+
             margin: auto;
+
             display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
+
+            grid-template-columns:
+                0.9fr 1.1fr;
+
             gap: 50px;
+
             align-items: start;
         }
 
         .contact-info h2 {
             font-size: 42px;
+
             margin-bottom: 18px;
         }
 
         .contact-info p {
             color: #cbd5e1;
+
             margin-bottom: 25px;
         }
 
         .whatsapp-big {
             display: inline-block;
+
             background: #25D366;
+
             color: white;
+
             padding: 15px 22px;
+
             border-radius: 9px;
+
             font-weight: 800;
+
             margin-top: 10px;
         }
 
+
+        /* =========================
+           FORM
+        ========================= */
+
         form {
             background: white;
+
             padding: 30px;
+
             border-radius: 16px;
         }
 
         form input,
         form textarea {
+
             width: 100%;
+
             padding: 14px;
+
             margin-bottom: 15px;
-            border: 1px solid #d1d5db;
+
+            border:
+                1px solid #d1d5db;
+
             border-radius: 8px;
+
             font-family: inherit;
+
             font-size: 15px;
         }
 
         form textarea {
+
             min-height: 130px;
+
             resize: vertical;
         }
 
         form button {
+
             width: 100%;
+
             border: none;
+
             cursor: pointer;
+
             font-size: 16px;
         }
+
 
         /* =========================
            FOOTER
         ========================= */
 
         footer {
+
             background: #0b1120;
+
             color: #94a3b8;
+
             text-align: center;
+
             padding: 25px 7%;
         }
+
 
         /* =========================
            FLOATING WHATSAPP
         ========================= */
 
         .floating-whatsapp {
+
             position: fixed;
+
             right: 20px;
+
             bottom: 20px;
+
             z-index: 2000;
+
             background: #25D366;
+
             color: white;
+
             padding: 14px 18px;
+
             border-radius: 50px;
+
             font-weight: 800;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.2);
         }
+
 
         /* =========================
            MOBILE
@@ -580,93 +824,131 @@
         @media (max-width: 850px) {
 
             nav {
-                padding: 15px 5%;
+
+                padding:
+                    15px 5%;
             }
 
             .nav-links {
+
                 display: none;
             }
 
             .hero {
-                padding: 75px 5%;
+
+                padding:
+                    75px 5%;
+
                 flex-direction: column;
+
                 text-align: center;
             }
 
             .hero p {
+
                 margin-left: auto;
+
                 margin-right: auto;
             }
 
             .buttons {
+
                 justify-content: center;
             }
 
             .service-grid,
             .portfolio-grid,
             .pricing-grid {
+
                 grid-template-columns: 1fr;
             }
 
             .about-container,
             .contact-container {
+
                 grid-template-columns: 1fr;
             }
 
             .price-card.featured {
+
                 transform: none;
             }
 
             section {
-                padding: 70px 5%;
+
+                padding:
+                    70px 5%;
             }
 
             .section-title h2,
             .about-text h2,
             .contact-info h2 {
+
                 font-size: 34px;
             }
 
             .hero-card {
+
                 width: 100%;
             }
 
             .floating-whatsapp {
+
                 right: 15px;
+
                 bottom: 15px;
             }
+
         }
 
     </style>
 
 </head>
 
+
 <body>
 
+
     <!-- =========================
-         NAVBAR
+         NAVIGATION
     ========================= -->
 
     <nav>
 
         <a href="#home" class="logo">
+
             Zaid<span>Web</span>
+
         </a>
+
 
         <div class="nav-links">
 
-            <a href="#home">Home</a>
+            <a href="#home">
+                Home
+            </a>
 
-            <a href="#services">Services</a>
+            <a href="#services">
+                Services
+            </a>
 
-            <a href="#portfolio">Portfolio</a>
+            <a href="#portfolio">
+                Portfolio
+            </a>
 
-            <a href="#about">About</a>
+            <a href="#about">
+                About
+            </a>
 
-            <a href="#pricing">Pricing</a>
+            <a href="#pricing">
+                Pricing
+            </a>
 
-            <a href="#contact" class="nav-button">
+            <a href="#contact"
+               class="nav-button">
+
                 Contact
+
             </a>
 
         </div>
@@ -674,63 +956,101 @@
     </nav>
 
 
+
     <!-- =========================
          HERO
     ========================= -->
 
-    <section class="hero" id="home">
+    <section
+        class="hero"
+        id="home">
+
 
         <div class="hero-content">
 
+
             <div class="small-title">
+
                 PROFESSIONAL WEB DESIGN
+
             </div>
 
+
             <h1>
+
                 Build a Website That
-                <span>Grows Your Business.</span>
+
+                <span>
+                    Grows Your Business.
+                </span>
+
             </h1>
 
+
             <p>
-                I create modern, responsive and mobile-friendly
-                websites that help businesses build a professional
+
+                I create modern, responsive and
+                mobile-friendly websites that help
+                businesses build a professional
                 online presence.
+
             </p>
+
 
             <div class="buttons">
 
-                <a href="#contact" class="button primary">
+
+                <a
+                    href="#contact"
+                    class="button primary">
+
                     Get Your Website
+
                 </a>
 
-                <a href="#portfolio" class="button secondary">
+
+                <a
+                    href="#portfolio"
+                    class="button secondary">
+
                     View My Work
+
                 </a>
+
 
             </div>
+
 
         </div>
 
 
+
         <div class="hero-card">
 
+
             <div class="browser">
+
 
                 <div class="browser-top">
 
                     <div class="dot"></div>
+
                     <div class="dot"></div>
+
                     <div class="dot"></div>
 
                 </div>
 
+
                 <div class="browser-content">
+
 
                     <div class="fake-line"></div>
 
                     <div class="fake-line small"></div>
 
                     <div class="fake-line small"></div>
+
 
                     <div class="fake-boxes">
 
@@ -742,139 +1062,193 @@
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
+
         </div>
 
+
     </section>
+
 
 
     <!-- =========================
          SERVICES
     ========================= -->
 
-    <section class="services" id="services">
+    <section
+        class="services"
+        id="services">
+
 
         <div class="section-title">
 
-            <h2>What I Do</h2>
+            <h2>
+                What I Do
+            </h2>
 
             <p>
-                Everything you need to establish a professional
-                presence online.
+                Everything you need to establish
+                a professional presence online.
             </p>
 
         </div>
 
 
+
         <div class="service-grid">
 
+
             <div class="service-card">
 
-                <div class="icon">💻</div>
+                <div class="icon">
+                    💻
+                </div>
 
-                <h3>Website Design</h3>
+                <h3>
+                    Website Design
+                </h3>
 
                 <p>
-                    Modern and professional websites designed
-                    around your business and goals.
+                    Modern and professional websites
+                    designed around your business
+                    and goals.
                 </p>
 
             </div>
 
 
+
             <div class="service-card">
 
-                <div class="icon">📱</div>
+                <div class="icon">
+                    📱
+                </div>
 
-                <h3>Mobile Friendly</h3>
+                <h3>
+                    Mobile Friendly
+                </h3>
 
                 <p>
-                    Your website will look great on phones,
-                    tablets and computers.
+                    Your website will look great on
+                    phones, tablets and computers.
                 </p>
 
             </div>
 
 
+
             <div class="service-card">
 
-                <div class="icon">⚡</div>
+                <div class="icon">
+                    ⚡
+                </div>
 
-                <h3>Fast Websites</h3>
+                <h3>
+                    Fast Websites
+                </h3>
 
                 <p>
-                    Clean and lightweight websites designed
-                    for a smooth browsing experience.
+                    Clean and lightweight websites
+                    designed for a smooth browsing
+                    experience.
                 </p>
 
             </div>
 
 
+
             <div class="service-card">
 
-                <div class="icon">🎨</div>
+                <div class="icon">
+                    🎨
+                </div>
 
-                <h3>Custom Design</h3>
+                <h3>
+                    Custom Design
+                </h3>
 
                 <p>
-                    A unique design created around your
-                    brand, business and audience.
+                    A unique design created around
+                    your brand, business and audience.
                 </p>
 
             </div>
 
 
+
             <div class="service-card">
 
-                <div class="icon">🔍</div>
+                <div class="icon">
+                    🔍
+                </div>
 
-                <h3>SEO Friendly</h3>
+                <h3>
+                    SEO Friendly
+                </h3>
 
                 <p>
-                    Websites structured with search engines
-                    and discoverability in mind.
+                    Websites structured with search
+                    engines and discoverability in mind.
                 </p>
 
             </div>
 
 
+
             <div class="service-card">
 
-                <div class="icon">🛠️</div>
+                <div class="icon">
+                    🛠️
+                </div>
 
-                <h3>Website Updates</h3>
+                <h3>
+                    Website Updates
+                </h3>
 
                 <p>
-                    Need changes after launch? I can help
-                    update and improve your website.
+                    Need changes after launch?
+                    I can help update and improve
+                    your website.
                 </p>
 
             </div>
+
 
         </div>
 
+
     </section>
+
 
 
     <!-- =========================
          PORTFOLIO
     ========================= -->
 
-    <section class="portfolio" id="portfolio">
+    <section
+        class="portfolio"
+        id="portfolio">
+
 
         <div class="section-title">
 
-            <h2>My Work</h2>
+            <h2>
+                My Work
+            </h2>
 
             <p>
                 A few website concepts and projects.
-                More projects can be added as your portfolio grows.
+                More projects can be added as your
+                portfolio grows.
             </p>
 
         </div>
+
 
 
         <div class="portfolio-grid">
@@ -882,17 +1256,24 @@
 
             <div class="portfolio-card">
 
+
                 <div class="portfolio-image">
+
                     BUSINESS WEBSITE
+
                 </div>
+
 
                 <div class="portfolio-info">
 
-                    <h3>Business Website</h3>
+                    <h3>
+                        Business Website
+                    </h3>
 
                     <p>
-                        A clean and professional website
-                        concept for a local business.
+                        A clean and professional
+                        website concept for a local
+                        business.
                     </p>
 
                     <span class="demo-label">
@@ -901,22 +1282,30 @@
 
                 </div>
 
+
             </div>
+
 
 
             <div class="portfolio-card">
 
+
                 <div class="portfolio-image">
+
                     RESTAURANT WEBSITE
+
                 </div>
+
 
                 <div class="portfolio-info">
 
-                    <h3>Restaurant Website</h3>
+                    <h3>
+                        Restaurant Website
+                    </h3>
 
                     <p>
-                        A modern website concept for a
-                        restaurant or cafe.
+                        A modern website concept
+                        for a restaurant or cafe.
                     </p>
 
                     <span class="demo-label">
@@ -925,18 +1314,26 @@
 
                 </div>
 
+
             </div>
+
 
 
             <div class="portfolio-card">
 
+
                 <div class="portfolio-image">
+
                     PERSONAL BRAND
+
                 </div>
+
 
                 <div class="portfolio-info">
 
-                    <h3>Personal Website</h3>
+                    <h3>
+                        Personal Website
+                    </h3>
 
                     <p>
                         A professional online presence
@@ -949,80 +1346,126 @@
 
                 </div>
 
+
             </div>
 
 
         </div>
 
+
     </section>
+
 
 
     <!-- =========================
          ABOUT
     ========================= -->
 
-    <section class="about" id="about">
+    <section
+        class="about"
+        id="about">
+
 
         <div class="about-container">
 
+
             <div class="about-image">
+
                 Z
+
             </div>
+
 
 
             <div class="about-text">
 
-                <h2>Why Work With Me?</h2>
+
+                <h2>
+                    Why Work With Me?
+                </h2>
+
 
                 <p>
-                    I create modern websites for businesses,
-                    entrepreneurs and individuals who want
-                    to build a professional presence online.
+
+                    I create modern websites for
+                    businesses, entrepreneurs and
+                    individuals who want to build
+                    a professional presence online.
+
                 </p>
 
+
                 <p>
-                    Every website is designed to be clean,
-                    responsive and easy for visitors to use.
+
+                    Every website is designed to be
+                    clean, responsive and easy for
+                    visitors to use.
+
                 </p>
 
 
                 <ul class="check-list">
 
-                    <li>Modern and professional design</li>
+                    <li>
+                        Modern and professional design
+                    </li>
 
-                    <li>Mobile-friendly layouts</li>
+                    <li>
+                        Mobile-friendly layouts
+                    </li>
 
-                    <li>Clear calls-to-action</li>
+                    <li>
+                        Clear calls-to-action
+                    </li>
 
-                    <li>Fast and lightweight websites</li>
+                    <li>
+                        Fast and lightweight websites
+                    </li>
 
-                    <li>Personalized to your business</li>
+                    <li>
+                        Personalized to your business
+                    </li>
 
                 </ul>
 
+
             </div>
+
 
         </div>
 
+
     </section>
+
 
 
     <!-- =========================
          PRICING
     ========================= -->
 
-    <section class="pricing" id="pricing">
+    <section
+        class="pricing"
+        id="pricing">
+
 
         <div class="section-title">
 
-            <h2>Website Packages</h2>
+
+            <h2>
+                Website Packages
+            </h2>
+
 
             <p>
+
                 Choose a package that fits your needs.
                 Custom requirements can also be discussed.
+
             </p>
 
+
         </div>
+
 
 
         <div class="pricing-grid">
@@ -1030,128 +1473,222 @@
 
             <div class="price-card">
 
-                <h3>Starter</h3>
+
+                <h3>
+                    Starter
+                </h3>
+
 
                 <div class="price">
                     Contact for Price
                 </div>
 
+
                 <div class="price-note">
-                    Perfect for individuals and simple websites.
+
+                    Perfect for individuals and
+                    simple websites.
+
                 </div>
+
 
                 <ul>
 
-                    <li>Professional design</li>
+                    <li>
+                        Professional design
+                    </li>
 
-                    <li>Mobile responsive</li>
+                    <li>
+                        Mobile responsive
+                    </li>
 
-                    <li>Basic pages</li>
+                    <li>
+                        Basic pages
+                    </li>
 
-                    <li>Contact section</li>
+                    <li>
+                        Contact section
+                    </li>
 
                 </ul>
 
-                <a href="#contact" class="button primary">
+
+                <a
+                    href="#contact"
+                    class="button primary">
+
                     Get Started
+
                 </a>
+
 
             </div>
 
 
-            <div class="price-card featured">
+
+            <div
+                class="price-card featured">
+
 
                 <span class="popular">
+
                     POPULAR
+
                 </span>
 
-                <h3>Business</h3>
+
+                <h3>
+                    Business
+                </h3>
+
 
                 <div class="price">
+
                     Contact for Price
+
                 </div>
 
+
                 <div class="price-note">
-                    Great for small and growing businesses.
+
+                    Great for small and growing
+                    businesses.
+
                 </div>
+
 
                 <ul>
 
-                    <li>Professional design</li>
+                    <li>
+                        Professional design
+                    </li>
 
-                    <li>Mobile responsive</li>
+                    <li>
+                        Mobile responsive
+                    </li>
 
-                    <li>Multiple pages</li>
+                    <li>
+                        Multiple pages
+                    </li>
 
-                    <li>Services section</li>
+                    <li>
+                        Services section
+                    </li>
 
-                    <li>Contact/WhatsApp</li>
+                    <li>
+                        Contact / WhatsApp
+                    </li>
 
                 </ul>
 
-                <a href="#contact" class="button primary">
+
+                <a
+                    href="#contact"
+                    class="button primary">
+
                     Get Started
+
                 </a>
 
+
             </div>
+
 
 
             <div class="price-card">
 
-                <h3>Custom</h3>
+
+                <h3>
+                    Custom
+                </h3>
+
 
                 <div class="price">
+
                     Let's Talk
+
                 </div>
 
+
                 <div class="price-note">
-                    For websites with custom requirements.
+
+                    For websites with custom
+                    requirements.
+
                 </div>
+
 
                 <ul>
 
-                    <li>Custom design</li>
+                    <li>
+                        Custom design
+                    </li>
 
-                    <li>Custom features</li>
+                    <li>
+                        Custom features
+                    </li>
 
-                    <li>Responsive layout</li>
+                    <li>
+                        Responsive layout
+                    </li>
 
-                    <li>Business requirements</li>
+                    <li>
+                        Business requirements
+                    </li>
 
                 </ul>
 
-                <a href="#contact" class="button primary">
+
+                <a
+                    href="#contact"
+                    class="button primary">
+
                     Discuss Project
+
                 </a>
+
 
             </div>
 
 
         </div>
 
+
     </section>
+
 
 
     <!-- =========================
          CONTACT
     ========================= -->
 
-    <section class="contact" id="contact">
+    <section
+        class="contact"
+        id="contact">
+
 
         <div class="contact-container">
 
 
             <div class="contact-info">
 
+
                 <h2>
-                    Ready to Build Your Website?
+
+                    Ready to Build
+                    Your Website?
+
                 </h2>
 
+
                 <p>
-                    Tell me about your business and what
-                    kind of website you need. I'll get back
-                    to you through WhatsApp.
+
+                    Tell me about your business and
+                    what kind of website you need.
+                    I'll get back to you through WhatsApp.
+
                 </p>
+
 
                 <a
                     href="https://wa.me/918548813585?text=Hello%20Zaid%2C%20I%20am%20interested%20in%20getting%20a%20website."
@@ -1162,10 +1699,16 @@
 
                 </a>
 
+
             </div>
 
 
-            <form onsubmit="sendToWhatsApp(event)">
+
+            <!-- CONTACT FORM -->
+
+            <form
+                onsubmit="sendToWhatsApp(event)">
+
 
                 <input
                     type="text"
@@ -1174,12 +1717,6 @@
                     required
                 >
 
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Your Email"
-                    required
-                >
 
                 <input
                     type="text"
@@ -1188,11 +1725,12 @@
                     required
                 >
 
+
                 <textarea
                     id="message"
                     placeholder="Tell me about your website..."
-                    required
-                ></textarea>
+                    required></textarea>
+
 
                 <button
                     type="submit"
@@ -1202,12 +1740,15 @@
 
                 </button>
 
+
             </form>
 
 
         </div>
 
+
     </section>
+
 
 
     <!-- =========================
@@ -1217,10 +1758,14 @@
     <footer>
 
         <p>
-            © 2026 Zaid Web Design. All rights reserved.
+
+            © 2026 Zaid Web Design.
+            All rights reserved.
+
         </p>
 
     </footer>
+
 
 
     <!-- =========================
@@ -1237,6 +1782,7 @@
     </a>
 
 
+
     <!-- =========================
          WHATSAPP FORM SCRIPT
     ========================= -->
@@ -1247,31 +1793,41 @@
 
             event.preventDefault();
 
+
             const name =
                 document.getElementById("name").value;
 
-            const email =
-                document.getElementById("email").value;
 
             const business =
                 document.getElementById("business").value;
+
 
             const message =
                 document.getElementById("message").value;
 
 
             const whatsappMessage =
+
                 "Hello Zaid!%0A%0A" +
-                "I am interested in your web design services.%0A%0A" +
-                "Name: " + encodeURIComponent(name) + "%0A" +
-                "Email: " + encodeURIComponent(email) + "%0A" +
+
+                "I am interested in your " +
+                "web design services.%0A%0A" +
+
+                "Name: " +
+                encodeURIComponent(name) +
+                "%0A" +
+
                 "Business / Website Type: " +
-                encodeURIComponent(business) + "%0A%0A" +
+                encodeURIComponent(business) +
+                "%0A%0A" +
+
                 "Project details:%0A" +
+
                 encodeURIComponent(message);
 
 
             const whatsappURL =
+
                 "https://wa.me/918548813585?text=" +
                 whatsappMessage;
 
