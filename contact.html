@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - My Web Design Business</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffffff;
+            color: #222;
+        }
+
+        nav {
+            background-color: #111827;
+            padding: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: lightblue;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        input,
+        textarea {
+            width: 300px;
+            max-width: 90%;
+            padding: 12px;
+            margin: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        footer {
+            padding: 30px;
+            background-color: #111827;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            nav a {
+                margin: 0 8px;
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+
+    <section>
+
+        <h1>Contact Me</h1>
+
+        <p>
+            Have a project in mind?
+            Send me a message.
+        </p>
+
+
+        <form onsubmit="submitForm(event)">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <br>
+
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <br>
+
+
+            <textarea
+                id="message"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <br>
+
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 My Web Design Business
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function submitForm(event) {
+
+            event.preventDefault();
+
+            let name =
+                document.getElementById("name").value;
+
+            alert(
+                "Thank you, " +
+                name +
+                "! I received your message."
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
