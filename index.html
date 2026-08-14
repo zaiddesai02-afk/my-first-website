@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+
+    <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,75 +20,119 @@
         }
 
         body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #ffffff;
-    color: #222;
-}
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffffff;
+            color: #222;
+        }
+
 
         /* =========================
            NAVIGATION
         ========================= */
 
         nav {
-    background-color: #111827;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+            background-color: #111827;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 17px;
-    font-weight: bold;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 17px;
+            font-weight: bold;
+        }
 
-nav a:hover {
-    color: lightblue;
-}
+        nav a:hover {
+            color: lightblue;
+        }
+
 
         /* =========================
-           HEADER
+           HERO
         ========================= */
 
-        header {
-            padding: 80px 20px;
-            background-color: lightblue;
+        .hero {
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            background-color: #eff6ff;
         }
 
-        header h1 {
-            font-size: 50px;
+        .hero-content {
+            max-width: 800px;
         }
 
-        header p {
+        .hero-small {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #2563eb;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin: 20px 0;
+        }
+
+        .hero-description {
             font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
         }
 
 
         /* =========================
-           BUTTONS
+           BUTTON
         ========================= */
 
         button {
-    background-color: #2563eb;
-    color: white;
-    padding: 14px 28px;
-    border: none;
-    border-radius: 8px;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
+            background-color: #2563eb;
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-button:hover {
-    background-color: #1d4ed8;
-    transform: translateY(-2px);
-}
+        button:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           SECONDARY BUTTON
+        ========================= */
+
+        .secondary-button {
+            display: inline-block;
+            margin-left: 15px;
+            padding: 12px 25px;
+            border: 2px solid #1e3a8a;
+            border-radius: 8px;
+            color: #1e3a8a;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .secondary-button:hover {
+            background-color: #1e3a8a;
+            color: white;
+        }
 
 
         /* =========================
@@ -94,49 +140,115 @@ button:hover {
         ========================= */
 
         section {
-            padding: 50px 20px;
+            padding: 80px 20px;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
         }
 
 
         /* =========================
-           SERVICES - FLEXBOX
+           SERVICES
         ========================= */
 
         .services-container {
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .services-container div {
-    width: 250px;
-    padding: 30px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-.services-container div:hover {
-    transform: translateY(-10px);
-}
+        .service-card {
+            width: 250px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+        }
+
+        .service-card p {
+            line-height: 1.6;
+        }
 
 
         /* =========================
-           CONTACT FORM
+           ABOUT
         ========================= */
+
+        #about {
+            background-color: #f8fafc;
+        }
+
+        .about-image {
+            width: 400px;
+            max-width: 90%;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-text {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        #contact {
+            background-color: #ffffff;
+        }
+
+        .contact-description {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
 
         input,
         textarea {
-            width: 300px;
-            padding: 12px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 8px;
             font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2563eb;
         }
 
         textarea {
-            height: 120px;
+            height: 140px;
             resize: vertical;
+        }
+
+        form button {
+            margin-top: 5px;
         }
 
 
@@ -146,58 +258,60 @@ button:hover {
 
         footer {
             padding: 30px;
-            background-color: darkblue;
+            background-color: #111827;
             color: white;
+        }
+
+        footer p {
+            margin: 0;
         }
 
 
         /* =========================
-           MOBILE RESPONSIVE
+           MOBILE
         ========================= */
 
         @media (max-width: 600px) {
-            .hero {
-    min-height: 450px;
-}
 
-.hero h1 {
-    font-size: 38px;
-}
-
-.hero-description {
-    font-size: 17px;
-}
-
-.hero-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.secondary-button {
-    margin-left: 0;
-}
+            nav {
+                padding: 15px 5px;
+            }
 
             nav a {
-                margin: 0 8px;
-                font-size: 15px;
+                margin: 0 7px;
+                font-size: 14px;
             }
 
-            header {
-                padding: 50px 15px;
+            .hero {
+                min-height: 450px;
+                padding: 40px 15px;
             }
 
-            header h1 {
-                font-size: 35px;
+            .hero h1 {
+                font-size: 38px;
             }
 
-            header p {
+            .hero-description {
                 font-size: 17px;
             }
 
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .secondary-button {
+                margin-left: 0;
+            }
+
             section {
-                padding: 30px 15px;
+                padding: 50px 15px;
+            }
+
+            section h2 {
+                font-size: 28px;
             }
 
             .services-container {
@@ -205,74 +319,26 @@ button:hover {
                 align-items: center;
             }
 
-            .services-container div {
+            .service-card {
                 width: auto;
                 max-width: 300px;
             }
 
+            .about-image {
+                width: 90%;
+            }
+
+            form {
+                width: 90%;
+            }
+
             input,
             textarea {
-                width: 90%;
-                padding: 12px;
+                width: 100%;
             }
 
         }
-        .hero {
-    min-height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-    background-color: #eff6ff;
-}
 
-.hero-content {
-    max-width: 800px;
-}
-
-.hero-small {
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #2563eb;
-}
-
-.hero h1 {
-    font-size: 55px;
-    margin: 20px 0;
-}
-
-.hero-description {
-    font-size: 20px;
-    line-height: 1.6;
-}
-
-.hero-buttons {
-    margin-top: 30px;
-}
-
-.secondary-button {
-    display: inline-block;
-    margin-left: 15px;
-    padding: 12px 25px;
-    border: 2px solid darkblue;
-    border-radius: 8px;
-    color: darkblue;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.secondary-button:hover {
-    background-color: darkblue;
-    color: white;
-}
-.about-image {
-    width: 400px;
-    max-width: 90%;
-    border-radius: 15px;
-    margin: 20px 0;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-}
     </style>
 
 </head>
@@ -287,53 +353,53 @@ button:hover {
 
     <nav>
 
-    <a href="index.html">Home</a>
+        <a href="index.html">Home</a>
 
-    <a href="services.html">Services</a>
+        <a href="services.html">Services</a>
 
-    <a href="about.html">About</a>
+        <a href="about.html">About</a>
 
-    <a href="contact.html">Contact</a>
+        <a href="contact.html">Contact</a>
 
-</nav>
+    </nav>
 
 
     <!-- =========================
-         HOME / HERO
+         HERO
     ========================= -->
 
     <header id="home" class="hero">
 
-    <div class="hero-content">
+        <div class="hero-content">
 
-        <p class="hero-small">
-            PROFESSIONAL WEB DESIGN
-        </p>
+            <p class="hero-small">
+                PROFESSIONAL WEB DESIGN
+            </p>
 
-        <h1 id="mainTitle">
-            Build a Website That Grows Your Business
-        </h1>
+            <h1 id="mainTitle">
+                Build a Website That Grows Your Business
+            </h1>
 
-        <p class="hero-description">
-            I create modern, fast and mobile-friendly
-            websites that help businesses grow online.
-        </p>
+            <p class="hero-description">
+                I create modern, fast and mobile-friendly
+                websites that help businesses grow online.
+            </p>
 
-        <div class="hero-buttons">
+            <div class="hero-buttons">
 
-            <button onclick="sayHello()">
-                Get Started
-            </button>
+                <button onclick="sayHello()">
+                    Get Started
+                </button>
 
-            <a href="#services" class="secondary-button">
-                View Services
-            </a>
+                <a href="#services" class="secondary-button">
+                    View Services
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
-
-</header>
+    </header>
 
 
     <!-- =========================
@@ -342,13 +408,14 @@ button:hover {
 
     <section id="services">
 
-        <h2>What I Do</h2>
-
+        <h2>
+            What I Do
+        </h2>
 
         <div class="services-container">
 
 
-            <div>
+            <div class="service-card">
 
                 <h3>
                     Website Design
@@ -362,7 +429,7 @@ button:hover {
             </div>
 
 
-            <div>
+            <div class="service-card">
 
                 <h3>
                     Mobile Friendly
@@ -376,7 +443,7 @@ button:hover {
             </div>
 
 
-            <div>
+            <div class="service-card">
 
                 <h3>
                     Fast Websites
@@ -401,24 +468,34 @@ button:hover {
 
     <section id="about">
 
-    <h2>
-        About Me
-    </h2>
+        <h2>
+            About Me
+        </h2>
 
-       <img
-src="business.jpg"
-alt="Business website"
-class="about-image"
->
-    
+        <img
+            src="business.jpg"
+            alt="Business website"
+            class="about-image"
+        >
 
-    <p>
-        I am learning web development
-        and building websites for
-        businesses and individuals.
-    </p>
+        <div class="about-text">
 
-</section>
+            <p>
+                I am learning web development
+                and building websites for
+                businesses and individuals.
+            </p>
+
+            <p>
+                My goal is to create websites
+                that look professional, load fast,
+                and work well on every device.
+            </p>
+
+        </div>
+
+    </section>
+
 
     <!-- =========================
          CONTACT
@@ -430,40 +507,50 @@ class="about-image"
             Contact Me
         </h2>
 
+        <p class="contact-description">
+            Have a project in mind? Send me a message.
+        </p>
 
-        <form action="https://formspree.io/f/mljrlzke" method="POST">
 
-    <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        required
-    >
+        <!-- FORMspree FORM -->
 
-    <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        required
-    >
+        <form
+            action="https://formspree.io/f/mljrlzke"
+            method="POST"
+        >
 
-    <textarea
-        name="message"
-        placeholder="Your Message"
-        required
-    ></textarea>
+            <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+            >
 
-    <input
-        type="hidden"
-        name="subject"
-        value="New Website Inquiry"
-    >
+            <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+            >
 
-    <button type="submit">
-        Send Message
-    </button>
+            <textarea
+                name="message"
+                placeholder="Your Message"
+                required
+            ></textarea>
 
-</form>
+            <input
+                type="hidden"
+                name="subject"
+                value="New Website Inquiry"
+            >
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
     </section>
 
 
@@ -486,34 +573,12 @@ class="about-image"
 
     <script>
 
-
-        /* Get Started button */
-
         function sayHello() {
 
             document.getElementById("mainTitle").innerText =
                 "Welcome! Let's Build Your Website 🚀";
 
         }
-
-
-        /* Contact form */
-
-        function submitForm(event) {
-
-            event.preventDefault();
-
-            let name =
-                document.getElementById("name").value;
-
-            alert(
-                "Thank you, " +
-                name +
-                "! I received your message."
-            );
-
-        }
-
 
     </script>
 
