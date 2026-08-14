@@ -431,45 +431,39 @@ class="about-image"
         </h2>
 
 
-        <form onsubmit="submitForm(event)">
+        <form action="https://formspree.io/f/mljrlzke" method="POST">
 
+    <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+    >
 
-            <input
-                type="text"
-                id="name"
-                placeholder="Your Name"
-                required
-            >
+    <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+    >
 
-            <br><br>
+    <textarea
+        name="message"
+        placeholder="Your Message"
+        required
+    ></textarea>
 
+    <input
+        type="hidden"
+        name="subject"
+        value="New Website Inquiry"
+    >
 
-            <input
-                type="email"
-                id="email"
-                placeholder="Your Email"
-                required
-            >
+    <button type="submit">
+        Send Message
+    </button>
 
-            <br><br>
-
-
-            <textarea
-                id="message"
-                placeholder="Your Message"
-                required
-            ></textarea>
-
-            <br><br>
-
-
-            <button type="submit">
-                Send Message
-            </button>
-
-
-        </form>
-
+</form>
     </section>
 
 
