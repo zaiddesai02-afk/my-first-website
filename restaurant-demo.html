@@ -1,10 +1,210 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="An elegant restaurant website demo by ZaidWeb."><title>Saffron & Stone | Restaurant Demo</title><style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;600;700&display=swap');:root{--wine:#631f27;--cream:#fffaf2;--gold:#c58a42;--ink:#2b2020}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Manrope,Arial,sans-serif}a{text-decoration:none;color:inherit}.wrap{width:min(1120px,90%);margin:auto}.hero{min-height:680px;color:#fff;background:linear-gradient(90deg,#20120cce,#20120c38),url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1600&q=85') center/cover}.nav{padding:25px 0;display:flex;justify-content:space-between;align-items:center}.brand,h1,h2{font-family:'DM Serif Display',Georgia,serif}.brand{font-size:25px}.navlinks{display:flex;gap:25px;font-size:14px}.book{border:1px solid #ffffffa3;padding:10px 14px}.intro{max-width:680px;padding:120px 0 60px}.kicker{color:#f4c98b;letter-spacing:2px;font-size:12px;font-weight:700}.intro h1{font-size:clamp(50px,8vw,86px);font-weight:400;line-height:.95;margin:15px 0 23px}.intro p{max-width:500px;color:#f2e8df;line-height:1.7}.button{display:inline-block;background:#f6e1bd;color:#48201d;font-weight:700;padding:14px 20px;margin-top:16px}.section{padding:88px 0}.story{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.story img{width:100%;height:400px;object-fit:cover}.story h2,.menu h2{font-size:44px;font-weight:400;line-height:1;margin:10px 0 20px}.story p,.menu p{color:#6d5d59;line-height:1.7}.menu{background:#f2e8d9;text-align:center}.menu>p{max-width:540px;margin:0 auto 40px}.dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:left}.dish{background:#fffaf2;padding:25px}.dish span{color:var(--gold);font-size:13px;font-weight:bold}.dish h3{margin:8px 0}.dish p{font-size:14px}.visit{background:var(--wine);color:#fff;text-align:center;padding:75px 15px}.visit h2{font-size:45px;font-weight:400;margin:0}.visit p{color:#e7c9ca}.visit .button{background:#f6e1bd}@media(max-width:700px){.navlinks{display:none}.hero{min-height:610px}.intro{padding-top:105px}.story,.dishes{grid-template-columns:1fr;gap:28px}.section{padding:62px 0}.story img{height:290px}.story h2,.menu h2{font-size:37px}}
-</style></head><body>
-<header class="hero"><nav class="wrap nav"><a class="brand" href="#">Saffron &amp; Stone</a><div class="navlinks"><a href="#story">Our story</a><a href="#menu">Menu</a><a href="#visit">Visit</a></div><a class="book" href="#visit">Reserve a table</a></nav><div class="wrap intro"><div class="kicker">SEASONAL INDIAN KITCHEN</div><h1>A table worth lingering over.</h1><p>Thoughtful cooking, warm spices and ingredients chosen at their peak. Join us for a relaxed evening in the heart of the city.</p><a class="button" href="#visit">Book your table</a></div></header>
-<section class="section wrap story" id="story"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=900&q=85" alt="Restaurant interior"><div><div class="kicker" style="color:#a96232">OUR TABLE</div><h2>Made for unhurried meals.</h2><p>At Saffron &amp; Stone, familiar ingredients meet a fresh point of view. Our menu follows the seasons and our dining room is designed for the conversations that matter.</p><p>Come as you are. Stay for dessert.</p></div></section>
-<section class="section menu" id="menu"><div class="wrap"><div class="kicker" style="color:#a96232">A TASTE OF THE MENU</div><h2>Small menu, big feeling.</h2><p>Three courses that showcase the colour, texture and generosity of our kitchen.</p><div class="dishes"><article class="dish"><span>TO START</span><h3>Charred paneer</h3><p>Tomato kasundi, smoked chilli and crisp herbs.</p></article><article class="dish"><span>MAIN</span><h3>Slow-cooked lamb</h3><p>Black cardamom, saffron rice and cucumber raita.</p></article><article class="dish"><span>DESSERT</span><h3>Rose milk cake</h3><p>Pistachio, cardamom cream and a little nostalgia.</p></article></div></div></section>
-<section class="visit" id="visit"><h2>Tonight’s table is waiting.</h2><p>Tuesday–Sunday · 6pm–11pm · City Centre</p><a class="button" href="https://wa.me/918548813585?text=Hello%20Zaid%2C%20I%20like%20the%20Saffron%20%26%20Stone%20restaurant%20demo." target="_blank" rel="noopener">Reserve on WhatsApp</a></section>
-</body></html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Saffron & Spice - Premium Indian dining demo website.">
+<title>Saffron & Spice | Fine Indian Dining</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#211a15;background:#fffaf5;line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%}
+.container{width:min(1120px,92%);margin:auto}
+.navbar{position:fixed;top:0;left:0;width:100%;z-index:99;background:rgba(22,16,12,.95);color:#fff}
+.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:700 24px Georgia,serif;color:#efbd55}
+.logo small{display:block;color:#fff;font:700 8px Arial;letter-spacing:3px;text-align:center}
+.links{display:flex;align-items:center;gap:25px}
+.links a{font-size:14px;color:#eee}
+.links a:hover{color:#efbd55}
+.nav-cta,.btn.gold{background:#d89a2b;color:#17110b!important;padding:11px 18px;border-radius:25px;font-weight:bold}
+.toggle{display:none;background:none;border:0;color:#fff;font-size:28px}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 70px;color:#fff;background:linear-gradient(90deg,rgba(10,7,4,.75),rgba(10,7,4,.45)),url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85") center/cover}
+.hero-content{max-width:720px}
+.label{text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:bold;color:#d89a2b;margin-bottom:12px}
+.hero h1{font:700 clamp(45px,7vw,82px)/1.02 Georgia,serif;margin-bottom:20px}
+.hero p{font-size:18px;color:#eee;max-width:600px;margin-bottom:28px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 23px;border:1px solid #d89a2b;border-radius:5px;font-weight:bold}
+.btn.outline{color:#fff}
+.btn.outline:hover{background:#fff;color:#222}
+section{padding:85px 0}
+.heading{text-align:center;max-width:680px;margin:0 auto 42px}
+.heading h2{font:700 clamp(32px,5vw,48px) Georgia,serif;margin:6px 0 10px}
+.heading p{color:#6d665f}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about img{height:510px;object-fit:cover;border-radius:10px}
+.about h2{font:700 42px Georgia,serif;margin-bottom:16px}
+.about p{color:#666;margin-bottom:15px}
+.signature{font:24px cursive;color:#a66d13;margin-top:22px}
+.dark{background:#18120e;color:#fff}
+.dark .heading p{color:#c8beb5}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#241c16;border:1px solid #3c3027;border-radius:10px;overflow:hidden}
+.card img{height:220px;object-fit:cover}
+.card-body{padding:19px}
+.card-top{display:flex;justify-content:space-between;gap:10px}
+.card h3{font:700 21px Georgia,serif}
+.price{color:#efbd55;font-weight:bold;white-space:nowrap}
+.card p{color:#bdb2a9;font-size:14px;margin-top:7px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feature{text-align:center;background:#fff;padding:28px 20px;border:1px solid #eadfd3;border-radius:10px}
+.icon{font-size:34px;margin-bottom:8px}
+.feature h3{font:700 21px Georgia,serif;margin-bottom:6px}
+.feature p{font-size:14px;color:#777}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gallery div{overflow:hidden;border-radius:7px}
+.gallery img{height:240px;object-fit:cover;transition:.35s}
+.gallery img:hover{transform:scale(1.06)}
+.reviews{background:#f1e6d8}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review{background:#fff;padding:27px;border-radius:10px}
+.stars{color:#d89a2b;letter-spacing:2px;margin-bottom:10px}
+.review p{font-style:italic;color:#555;margin-bottom:16px}
+.cta{color:#fff;text-align:center;background:linear-gradient(rgba(22,12,6,.78),rgba(22,12,6,.78)),url("https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1800&q=85") center/cover}
+.cta h2{font:700 clamp(34px,5vw,54px) Georgia,serif;margin-bottom:10px}
+.cta p{max-width:620px;margin:0 auto 24px;color:#eee}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.contact{background:#fff;border:1px solid #eadfd3;border-radius:10px;padding:28px}
+.contact h3{font:700 25px Georgia,serif;margin-bottom:15px}
+.item{margin:13px 0;color:#666}
+.item strong{display:block;color:#222;margin-bottom:2px}
+footer{background:#18120e;color:#aaa;text-align:center;padding:30px 0;font-size:13px}
+footer .logo{display:inline-block;margin-bottom:8px}
+@media(max-width:800px){
+ .toggle{display:block}
+ .links{display:none;position:absolute;top:70px;left:0;width:100%;background:#18120e;padding:8px 5%;flex-direction:column;align-items:stretch;gap:0}
+ .links.open{display:flex}
+ .links a{padding:13px 5px}
+ .nav-cta{text-align:center;margin:5px 0 10px}
+ .about,.contact-grid{grid-template-columns:1fr}
+ .about img{height:360px}
+ .menu-grid,.features,.review-grid{grid-template-columns:1fr}
+ .gallery{grid-template-columns:repeat(2,1fr)}
+ .gallery img{height:180px}
+ section{padding:70px 0}
+}
+@media(max-width:480px){
+ .hero{min-height:92vh}
+ .hero p{font-size:16px}
+ .buttons{flex-direction:column}
+ .btn{text-align:center}
+ .about h2{font-size:34px}
+ .gallery img{height:145px}
+}
+</style>
+</head>
+<body>
+<header class="navbar">
+<div class="container nav">
+<a class="logo" href="#home">SAFFRON & SPICE<small>FINE INDIAN DINING</small></a>
+<button class="toggle" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+<nav class="links" id="links">
+<a href="#home" onclick="closeMenu()">Home</a>
+<a href="#about" onclick="closeMenu()">About</a>
+<a href="#menu" onclick="closeMenu()">Menu</a>
+<a href="#gallery" onclick="closeMenu()">Gallery</a>
+<a href="#reviews" onclick="closeMenu()">Reviews</a>
+<a class="nav-cta" href="#contact" onclick="closeMenu()">Reserve a Table</a>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="container hero-content">
+<div class="label">Authentic Indian Cuisine</div>
+<h1>Where Every Meal Becomes a Memory.</h1>
+<p>Experience bold Indian flavours, warm hospitality and beautifully crafted dishes in an elegant dining atmosphere.</p>
+<div class="buttons">
+<a class="btn gold" href="#menu">Explore Our Menu</a>
+<a class="btn outline" href="#contact">Reserve a Table</a>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about">
+<img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1000&q=85" alt="Indian food">
+<div>
+<div class="label">Our Story</div>
+<h2>Tradition on Every Plate</h2>
+<p>Saffron & Spice brings together generations of Indian culinary tradition with a modern dining experience.</p>
+<p>From slow-cooked curries to fragrant biryanis and freshly baked breads, every dish is prepared with carefully selected ingredients and authentic spices.</p>
+<div class="signature">— The Saffron & Spice Family</div>
+</div>
+</div>
+</section>
+
+<section class="dark" id="menu">
+<div class="container">
+<div class="heading"><div class="label">Chef's Selection</div><h2>Our Signature Menu</h2><p>A few favourites from our kitchen, crafted to make your dining experience unforgettable.</p></div>
+<div class="menu-grid">
+<article class="card"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85" alt="Butter chicken"><div class="card-body"><div class="card-top"><h3>Royal Butter Chicken</h3><span class="price">₹420</span></div><p>Tender chicken simmered in a rich tomato, butter and aromatic spice sauce.</p></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=900&q=85" alt="Biryani"><div class="card-body"><div class="card-top"><h3>Royal Dum Biryani</h3><span class="price">₹390</span></div><p>Fragrant basmati rice layered with spices and slow-cooked to perfection.</p></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85" alt="Samosa"><div class="card-body"><div class="card-top"><h3>Classic Samosa</h3><span class="price">₹160</span></div><p>Crispy pastry filled with seasoned potato, peas and fragrant herbs.</p></div></article>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="heading"><div class="label">Why Saffron & Spice</div><h2>Made for Moments</h2></div>
+<div class="features">
+<div class="feature"><div class="icon">👨‍🍳</div><h3>Expert Chefs</h3><p>Traditional recipes prepared by passionate chefs.</p></div>
+<div class="feature"><div class="icon">🌿</div><h3>Fresh Ingredients</h3><p>Quality ingredients and freshly ground spices.</p></div>
+<div class="feature"><div class="icon">✨</div><h3>Elegant Ambience</h3><p>A beautiful setting for family dinners and celebrations.</p></div>
+</div>
+</div>
+</section>
+
+<section id="gallery">
+<div class="container">
+<div class="heading"><div class="label">A Taste of Saffron & Spice</div><h2>Our Gallery</h2><p>Good food deserves to look as beautiful as it tastes.</p></div>
+<div class="gallery">
+<div><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=85" alt="Restaurant interior"></div>
+<div><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=85" alt="Indian curry"></div>
+<div><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85" alt="Indian dish"></div>
+<div><img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=800&q=85" alt="Indian food"></div>
+</div>
+</div>
+</section>
+
+<section class="reviews" id="reviews">
+<div class="container">
+<div class="heading"><div class="label">Guest Reviews</div><h2>Loved by Our Guests</h2></div>
+<div class="review-grid">
+<div class="review"><div class="stars">★★★★★</div><p>“Beautiful ambience and incredible food. The biryani was absolutely delicious.”</p><strong>— Aarav M.</strong></div>
+<div class="review"><div class="stars">★★★★★</div><p>“A perfect place for a family dinner. Wonderful service and amazing flavours.”</p><strong>— Priya R.</strong></div>
+<div class="review"><div class="stars">★★★★★</div><p>“The food, presentation and atmosphere were all excellent. We will definitely return.”</p><strong>— Rohan K.</strong></div>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+<h2>Your Table Is Waiting.</h2>
+<p>Planning a special dinner? Reserve your table and make your next meal memorable.</p>
+<a class="btn gold" href="#contact">Reserve a Table</a>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="heading"><div class="label">Visit Us</div><h2>Come Dine With Us</h2><p>We'd love to welcome you to Saffron & Spice.</p></div>
+<div class="contact-grid">
+<div class="contact"><h3>Restaurant Details</h3><div class="item"><strong>📍 Address</strong>123 MG Road, Bengaluru, Karnataka</div><div class="item"><strong>📞 Phone</strong>+91 98765 43210</div><div class="item"><strong>✉️ Email</strong>hello@saffronspice.example</div></div>
+<div class="contact"><h3>Opening Hours</h3><div class="item"><strong>Monday – Thursday</strong>12:00 PM – 10:30 PM</div><div class="item"><strong>Friday – Sunday</strong>12:00 PM – 11:30 PM</div><div class="item"><strong>Reservations</strong>Call us to reserve your table.</div><a class="btn gold" href="tel:+919876543210">Call to Reserve</a></div>
+</div>
+</div>
+</section>
+
+<footer><div class="container"><div class="logo">SAFFRON & SPICE</div><p>© 2026 Saffron & Spice. Demo website created for portfolio purposes.</p></div></footer>
+
+<script>
+function toggleMenu(){document.getElementById('links').classList.toggle('open')}
+function closeMenu(){document.getElementById('links').classList.remove('open')}
+</script>
+</body>
+</html>
