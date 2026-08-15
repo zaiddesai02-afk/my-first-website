@@ -408,6 +408,416 @@
 
         .portfolio-grid {
             display: grid;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="ZaidWeb creates modern, professional and mobile-friendly websites for businesses and individuals.">
+
+    <title>ZaidWeb | Professional Websites</title>
+
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f8fafc;
+            color: #172033;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        section {
+            padding: 90px 7%;
+            scroll-margin-top: 90px;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.97);
+
+            border-bottom: 1px solid #e5e7eb;
+
+            padding: 18px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #111827;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #374151;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .nav-button {
+            background: #2563eb;
+            color: white !important;
+            padding: 10px 18px;
+            border-radius: 8px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 680px;
+
+            padding: 100px 7%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 60px;
+
+            background: linear-gradient(
+                135deg,
+                #eff6ff,
+                #ffffff
+            );
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .small-title {
+            color: #2563eb;
+
+            font-size: 15px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 72px);
+
+            line-height: 1.05;
+
+            margin-bottom: 25px;
+
+            color: #111827;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            font-size: 20px;
+
+            color: #4b5563;
+
+            max-width: 600px;
+
+            margin-bottom: 32px;
+        }
+
+        .buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 15px 25px;
+
+            border-radius: 9px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+
+            cursor: pointer;
+        }
+
+        .primary {
+            background: #2563eb;
+
+            color: white;
+
+            border: none;
+        }
+
+        .primary:hover {
+            background: #1d4ed8;
+
+            transform: translateY(-2px);
+        }
+
+        .secondary {
+            border: 2px solid #2563eb;
+
+            color: #2563eb;
+
+            background: white;
+        }
+
+        .secondary:hover {
+            background: #eff6ff;
+        }
+
+
+        /* =========================
+           HERO WEBSITE PREVIEW
+        ========================= */
+
+        .hero-card {
+            width: 420px;
+
+            max-width: 100%;
+
+            background: white;
+
+            border-radius: 20px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 20px 60px
+                rgba(15, 23, 42, 0.12);
+        }
+
+        .browser {
+            border: 1px solid #e5e7eb;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+        }
+
+        .browser-top {
+            padding: 12px;
+
+            background: #f1f5f9;
+
+            display: flex;
+
+            gap: 6px;
+        }
+
+        .dot {
+            width: 10px;
+
+            height: 10px;
+
+            border-radius: 50%;
+
+            background: #94a3b8;
+        }
+
+        .browser-content {
+            padding: 30px 20px;
+
+            min-height: 240px;
+
+            background:
+                linear-gradient(
+                    160deg,
+                    #dbeafe,
+                    #ffffff
+                );
+        }
+
+        .fake-line {
+            height: 12px;
+
+            background: #2563eb;
+
+            width: 55%;
+
+            border-radius: 10px;
+
+            margin-bottom: 15px;
+        }
+
+        .fake-line.small {
+            width: 80%;
+
+            background: #cbd5e1;
+        }
+
+        .fake-boxes {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 10px;
+
+            margin-top: 30px;
+        }
+
+        .fake-box {
+            height: 70px;
+
+            border-radius: 8px;
+
+            background: #e2e8f0;
+        }
+
+
+        /* =========================
+           SECTION TITLES
+        ========================= */
+
+        .section-title {
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: 0 auto 55px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+
+            margin-bottom: 12px;
+
+            color: #111827;
+        }
+
+        .section-title p {
+            color: #6b7280;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            background: white;
+        }
+
+        .service-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .service-card {
+            padding: 35px 28px;
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius: 16px;
+
+            background: white;
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(15, 23, 42, 0.08);
+        }
+
+        .icon {
+            font-size: 38px;
+
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+
+            font-size: 22px;
+        }
+
+        .service-card p {
+            color: #6b7280;
+        }
+
+
+        /* =========================
+           PORTFOLIO
+        ========================= */
+
+        .portfolio {
+            background: #f8fafc;
+        }
+
+        .portfolio-grid {
+            display: grid;
 
             grid-template-columns:
                 repeat(3, 1fr);
@@ -430,6 +840,10 @@
                 rgba(15, 23, 42, 0.05);
 
             transition: 0.3s;
+
+            display: flex;
+
+            flex-direction: column;
         }
 
         .portfolio-card:hover {
@@ -549,10 +963,57 @@
         }
 
 
+        /* DIFFERENT DEMO PREVIEW COLORS */
+
+        .restaurant-preview {
+            background: #fff7ed;
+        }
+
+        .restaurant-preview .preview-title {
+            background: #c2410c;
+        }
+
+        .restaurant-preview .preview-box {
+            background: #fed7aa;
+        }
+
+        .gym-preview {
+            background: #111827;
+        }
+
+        .gym-preview .preview-title {
+            background: #ef4444;
+        }
+
+        .gym-preview .preview-text {
+            background: #6b7280;
+        }
+
+        .gym-preview .preview-box {
+            background: #374151;
+        }
+
+        .business-preview {
+            background: #eff6ff;
+        }
+
+        .business-preview .preview-title {
+            background: #2563eb;
+        }
+
+
         /* PORTFOLIO INFORMATION */
 
         .portfolio-info {
             padding: 24px;
+
+            flex: 1;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-start;
         }
 
         .portfolio-info h3 {
@@ -566,7 +1027,7 @@
 
             font-size: 14px;
 
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .demo-label {
@@ -583,6 +1044,8 @@
             border-radius: 5px;
 
             font-weight: 700;
+
+            margin-bottom: 18px;
         }
 
         .view-project {
@@ -601,6 +1064,8 @@
             font-weight: 700;
 
             transition: 0.3s;
+
+            margin-top: auto;
         }
 
         .view-project:hover {
@@ -1352,8 +1817,8 @@
             </h2>
 
             <p>
-                Website concepts and projects created
-                with modern, responsive designs.
+                Explore some of my website concepts
+                created for different types of businesses.
             </p>
 
         </div>
@@ -1363,16 +1828,15 @@
         <div class="portfolio-grid">
 
 
-            <!-- BUSINESS WEBSITE -->
+            <!-- =========================
+                 DEMO 1 - SAFFRON & SPICE
+            ========================= -->
 
             <div class="portfolio-card">
 
-
-                <div class="portfolio-image">
-
+                <div class="portfolio-image restaurant-preview">
 
                     <div class="website-preview">
-
 
                         <div class="preview-top">
 
@@ -1386,7 +1850,6 @@
 
 
                         <div class="preview-body">
-
 
                             <div class="preview-title"></div>
 
@@ -1405,294 +1868,196 @@
 
                             </div>
 
-
                         </div>
 
-
                     </div>
-
 
                 </div>
 
 
-
                 <div class="portfolio-info">
 
-
                     <h3>
-                        Business Website
+                        🍛 Saffron & Spice
                     </h3>
 
-
                     <p>
-                        Modern website design for a
-                        small business or local company.
+                        A modern restaurant website designed
+                        to showcase the menu, atmosphere and
+                        make it easy for customers to contact
+                        the restaurant.
                     </p>
-
 
                     <span class="demo-label">
-                        DEMO PROJECT
+                        RESTAURANT DEMO
                     </span>
-
-                    <a href="business-demo.html" class="view-project">
-                        View Demo →
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- RESTAURANT WEBSITE -->
-
-            <div class="portfolio-card">
-
-
-                <div class="portfolio-image">
-
-
-                    <div class="website-preview">
-
-
-                        <div class="preview-top">
-
-                            <div class="preview-dot"></div>
-
-                            <div class="preview-dot"></div>
-
-                            <div class="preview-dot"></div>
-
-                        </div>
-
-
-                        <div class="preview-body">
-
-
-                            <div class="preview-title"></div>
-
-                            <div class="preview-text"></div>
-
-                            <div class="preview-text"></div>
-
-
-                            <div class="preview-boxes">
-
-                                <div class="preview-box"></div>
-
-                                <div class="preview-box"></div>
-
-                                <div class="preview-box"></div>
-
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <div class="portfolio-info">
-
-
-                    <h3>
-                        Restaurant Website
-                    </h3>
-
-
-                    <p>
-                        Clean and attractive website
-                        concept for a restaurant or cafe.
-                    </p>
-
-
-                    <span class="demo-label">
-                        DEMO PROJECT
-                    </span>
-
-                    <a href="restaurant-demo.html" class="view-project">
-                        View Demo →
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- PERSONAL WEBSITE -->
-
-            <div class="portfolio-card">
-
-
-                <div class="portfolio-image">
-
-
-                    <div class="website-preview">
-
-
-                        <div class="preview-top">
-
-                            <div class="preview-dot"></div>
-
-                            <div class="preview-dot"></div>
-
-                            <div class="preview-dot"></div>
-
-                        </div>
-
-
-                        <div class="preview-body">
-
-
-                            <div class="preview-title"></div>
-
-                            <div class="preview-text"></div>
-
-                            <div class="preview-text"></div>
-
-
-                            <div class="preview-boxes">
-
-                                <div class="preview-box"></div>
-
-                                <div class="preview-box"></div>
-
-                                <div class="preview-box"></div>
-
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <div class="portfolio-info">
-
-
-                    <h3>
-                        Personal Website
-                    </h3>
-
-
-                    <p>
-                        Professional website concept
-                        for a freelancer or creator.
-                    </p>
-
-
-                    <span class="demo-label">
-                        DEMO PROJECT
-                    </span>
-
-                    <a href="portfolio-demo.html" class="view-project">
-                        View Demo →
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- REAL ZAIDWEB PROJECT -->
-
-            <div class="portfolio-card">
-
-
-                <div class="portfolio-image">
-
-
-                    <div class="website-preview">
-
-
-                        <div class="preview-top">
-
-                            <div class="preview-dot"></div>
-
-                            <div class="preview-dot"></div>
-
-                            <div class="preview-dot"></div>
-
-                        </div>
-
-
-                        <div class="preview-body">
-
-
-                            <div class="preview-title"></div>
-
-                            <div class="preview-text"></div>
-
-                            <div class="preview-text"></div>
-
-
-                            <div class="preview-boxes">
-
-                                <div class="preview-box"></div>
-
-                                <div class="preview-box"></div>
-
-                                <div class="preview-box"></div>
-
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <div class="portfolio-info">
-
-
-                    <h3>
-                        ZaidWeb
-                    </h3>
-
-
-                    <p>
-                        My own professional web-design
-                        business website.
-                    </p>
-
 
                     <a
-                        href="https://zaiddesai02-afk.github.io/my-first-website/"
-                        target="_blank"
+                        href="restaurant-demo.html"
                         class="view-project">
 
-                        View Website
+                        View Live Demo →
 
                     </a>
 
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 DEMO 2 - FORGE FITNESS
+            ========================= -->
+
+            <div class="portfolio-card">
+
+                <div class="portfolio-image gym-preview">
+
+                    <div class="website-preview">
+
+                        <div class="preview-top">
+
+                            <div class="preview-dot"></div>
+
+                            <div class="preview-dot"></div>
+
+                            <div class="preview-dot"></div>
+
+                        </div>
+
+
+                        <div class="preview-body">
+
+                            <div class="preview-title"></div>
+
+                            <div class="preview-text"></div>
+
+                            <div class="preview-text"></div>
+
+
+                            <div class="preview-boxes">
+
+                                <div class="preview-box"></div>
+
+                                <div class="preview-box"></div>
+
+                                <div class="preview-box"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
 
+                <div class="portfolio-info">
+
+                    <h3>
+                        🏋️ FORGE Fitness
+                    </h3>
+
+                    <p>
+                        A powerful gym and fitness website
+                        designed to showcase programs,
+                        trainers, memberships and results.
+                    </p>
+
+                    <span class="demo-label">
+                        FITNESS DEMO
+                    </span>
+
+                    <a
+                        href="gym.html"
+                        class="view-project">
+
+                        View Live Demo →
+
+                    </a>
+
+                </div>
+
             </div>
+
+
+
+            <!-- =========================
+                 DEMO 3 - NORTHSTAR STUDIO
+            ========================= -->
+
+            <div class="portfolio-card">
+
+                <div class="portfolio-image business-preview">
+
+                    <div class="website-preview">
+
+                        <div class="preview-top">
+
+                            <div class="preview-dot"></div>
+
+                            <div class="preview-dot"></div>
+
+                            <div class="preview-dot"></div>
+
+                        </div>
+
+
+                        <div class="preview-body">
+
+                            <div class="preview-title"></div>
+
+                            <div class="preview-text"></div>
+
+                            <div class="preview-text"></div>
+
+
+                            <div class="preview-boxes">
+
+                                <div class="preview-box"></div>
+
+                                <div class="preview-box"></div>
+
+                                <div class="preview-box"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="portfolio-info">
+
+                    <h3>
+                        💼 Northstar Studio
+                    </h3>
+
+                    <p>
+                        A professional business website
+                        designed for local companies,
+                        agencies and service providers.
+                    </p>
+
+                    <span class="demo-label">
+                        BUSINESS DEMO
+                    </span>
+
+                    <a
+                        href="business-demo.html"
+                        class="view-project">
+
+                        View Live Demo →
+
+                    </a>
+
+                </div>
+
+            </div>
+
 
 
         </div>
@@ -2029,6 +2394,7 @@
                 <a
                     href="https://wa.me/918548813585?text=Hello%20Zaid%2C%20I%20am%20interested%20in%20getting%20a%20website."
                     target="_blank"
+                    rel="noopener"
                     class="whatsapp-big">
 
                     💬 Chat on WhatsApp
@@ -2111,6 +2477,7 @@
     <a
         href="https://wa.me/918548813585?text=Hello%20Zaid%2C%20I%20am%20interested%20in%20your%20web%20design%20services."
         target="_blank"
+        rel="noopener"
         class="floating-whatsapp">
 
         💬 WhatsApp
