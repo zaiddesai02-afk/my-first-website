@@ -1,210 +1,1509 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Saffron & Spice - Premium Indian dining demo website.">
-<title>Saffron & Spice | Fine Indian Dining</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:#211a15;background:#fffaf5;line-height:1.6}
-a{text-decoration:none;color:inherit}
-img{display:block;width:100%}
-.container{width:min(1120px,92%);margin:auto}
-.navbar{position:fixed;top:0;left:0;width:100%;z-index:99;background:rgba(22,16,12,.95);color:#fff}
-.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between}
-.logo{font:700 24px Georgia,serif;color:#efbd55}
-.logo small{display:block;color:#fff;font:700 8px Arial;letter-spacing:3px;text-align:center}
-.links{display:flex;align-items:center;gap:25px}
-.links a{font-size:14px;color:#eee}
-.links a:hover{color:#efbd55}
-.nav-cta,.btn.gold{background:#d89a2b;color:#17110b!important;padding:11px 18px;border-radius:25px;font-weight:bold}
-.toggle{display:none;background:none;border:0;color:#fff;font-size:28px}
-.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 70px;color:#fff;background:linear-gradient(90deg,rgba(10,7,4,.75),rgba(10,7,4,.45)),url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85") center/cover}
-.hero-content{max-width:720px}
-.label{text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:bold;color:#d89a2b;margin-bottom:12px}
-.hero h1{font:700 clamp(45px,7vw,82px)/1.02 Georgia,serif;margin-bottom:20px}
-.hero p{font-size:18px;color:#eee;max-width:600px;margin-bottom:28px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 23px;border:1px solid #d89a2b;border-radius:5px;font-weight:bold}
-.btn.outline{color:#fff}
-.btn.outline:hover{background:#fff;color:#222}
-section{padding:85px 0}
-.heading{text-align:center;max-width:680px;margin:0 auto 42px}
-.heading h2{font:700 clamp(32px,5vw,48px) Georgia,serif;margin:6px 0 10px}
-.heading p{color:#6d665f}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
-.about img{height:510px;object-fit:cover;border-radius:10px}
-.about h2{font:700 42px Georgia,serif;margin-bottom:16px}
-.about p{color:#666;margin-bottom:15px}
-.signature{font:24px cursive;color:#a66d13;margin-top:22px}
-.dark{background:#18120e;color:#fff}
-.dark .heading p{color:#c8beb5}
-.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:#241c16;border:1px solid #3c3027;border-radius:10px;overflow:hidden}
-.card img{height:220px;object-fit:cover}
-.card-body{padding:19px}
-.card-top{display:flex;justify-content:space-between;gap:10px}
-.card h3{font:700 21px Georgia,serif}
-.price{color:#efbd55;font-weight:bold;white-space:nowrap}
-.card p{color:#bdb2a9;font-size:14px;margin-top:7px}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.feature{text-align:center;background:#fff;padding:28px 20px;border:1px solid #eadfd3;border-radius:10px}
-.icon{font-size:34px;margin-bottom:8px}
-.feature h3{font:700 21px Georgia,serif;margin-bottom:6px}
-.feature p{font-size:14px;color:#777}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.gallery div{overflow:hidden;border-radius:7px}
-.gallery img{height:240px;object-fit:cover;transition:.35s}
-.gallery img:hover{transform:scale(1.06)}
-.reviews{background:#f1e6d8}
-.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.review{background:#fff;padding:27px;border-radius:10px}
-.stars{color:#d89a2b;letter-spacing:2px;margin-bottom:10px}
-.review p{font-style:italic;color:#555;margin-bottom:16px}
-.cta{color:#fff;text-align:center;background:linear-gradient(rgba(22,12,6,.78),rgba(22,12,6,.78)),url("https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1800&q=85") center/cover}
-.cta h2{font:700 clamp(34px,5vw,54px) Georgia,serif;margin-bottom:10px}
-.cta p{max-width:620px;margin:0 auto 24px;color:#eee}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.contact{background:#fff;border:1px solid #eadfd3;border-radius:10px;padding:28px}
-.contact h3{font:700 25px Georgia,serif;margin-bottom:15px}
-.item{margin:13px 0;color:#666}
-.item strong{display:block;color:#222;margin-bottom:2px}
-footer{background:#18120e;color:#aaa;text-align:center;padding:30px 0;font-size:13px}
-footer .logo{display:inline-block;margin-bottom:8px}
-@media(max-width:800px){
- .toggle{display:block}
- .links{display:none;position:absolute;top:70px;left:0;width:100%;background:#18120e;padding:8px 5%;flex-direction:column;align-items:stretch;gap:0}
- .links.open{display:flex}
- .links a{padding:13px 5px}
- .nav-cta{text-align:center;margin:5px 0 10px}
- .about,.contact-grid{grid-template-columns:1fr}
- .about img{height:360px}
- .menu-grid,.features,.review-grid{grid-template-columns:1fr}
- .gallery{grid-template-columns:repeat(2,1fr)}
- .gallery img{height:180px}
- section{padding:70px 0}
-}
-@media(max-width:480px){
- .hero{min-height:92vh}
- .hero p{font-size:16px}
- .buttons{flex-direction:column}
- .btn{text-align:center}
- .about h2{font-size:34px}
- .gallery img{height:145px}
-}
-</style>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Spice House - Delicious biryani and authentic Indian cuisine.">
+
+    <title>Spice House | Biryani Restaurant</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #2b2118;
+            background: #fffaf3;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: #fff;
+
+            padding: 16px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            color: #7f1d1d;
+            font-size: 25px;
+            font-weight: 900;
+        }
+
+        .logo span {
+            color: #d97706;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #4b3020;
+            font-weight: 700;
+        }
+
+        .nav-links a:hover {
+            color: #b91c1c;
+        }
+
+        .nav-button {
+            background: #b91c1c;
+            color: white !important;
+            padding: 10px 18px;
+            border-radius: 8px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 650px;
+
+            padding: 70px 7%;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 55px;
+
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff7ed,
+                    #fff
+                );
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .small-title {
+            color: #b91c1c;
+
+            font-size: 14px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 70px);
+
+            line-height: 1.05;
+
+            color: #451a03;
+
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #b91c1c;
+        }
+
+        .hero p {
+            font-size: 19px;
+
+            color: #6b4f3b;
+
+            margin-bottom: 28px;
+
+            max-width: 550px;
+        }
+
+        .buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 13px;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 14px 22px;
+
+            border-radius: 9px;
+
+            font-weight: 800;
+
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #b91c1c;
+
+            color: white;
+        }
+
+        .primary:hover {
+            background: #991b1b;
+
+            transform: translateY(-2px);
+        }
+
+        .secondary {
+            border: 2px solid #b91c1c;
+
+            color: #b91c1c;
+
+            background: white;
+        }
+
+        .secondary:hover {
+            background: #fff1f2;
+        }
+
+
+        /* =========================
+           BIRYANI IMAGE
+        ========================= */
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+
+            height: 430px;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 25px 60px
+                rgba(92, 45, 10, 0.25);
+        }
+
+        .image-badge {
+            position: absolute;
+
+            bottom: 25px;
+
+            left: 25px;
+
+            background: white;
+
+            padding: 15px 20px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,0,0,0.18);
+
+            font-weight: 800;
+
+            color: #451a03;
+        }
+
+        .image-badge span {
+            color: #b91c1c;
+        }
+
+
+        /* =========================
+           SPECIAL OFFER
+        ========================= */
+
+        .offer {
+            background: #7f1d1d;
+
+            color: white;
+
+            padding: 25px 7%;
+
+            text-align: center;
+        }
+
+        .offer strong {
+            font-size: 22px;
+        }
+
+        .offer span {
+            color: #fbbf24;
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: 0 auto 45px;
+        }
+
+        .section-title small {
+            color: #b91c1c;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+
+            color: #451a03;
+
+            margin: 8px 0 12px;
+        }
+
+        .section-title p {
+            color: #765c48;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           MENU
+        ========================= */
+
+        .menu {
+            background: #fffaf3;
+        }
+
+        .menu-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+            max-width: 1150px;
+
+            margin: auto;
+        }
+
+        .menu-card {
+            background: white;
+
+            border-radius: 17px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 25px
+                rgba(70, 40, 15, 0.09);
+
+            border: 1px solid #f1dfca;
+
+            transition: 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 18px 35px
+                rgba(70, 40, 15, 0.15);
+        }
+
+        .menu-card img {
+            height: 210px;
+
+            object-fit: cover;
+        }
+
+        .menu-info {
+            padding: 22px;
+        }
+
+        .menu-info h3 {
+            color: #451a03;
+
+            font-size: 22px;
+
+            margin-bottom: 7px;
+        }
+
+        .menu-info p {
+            color: #765c48;
+
+            font-size: 14px;
+
+            margin-bottom: 15px;
+        }
+
+        .menu-bottom {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .price {
+            color: #b91c1c;
+
+            font-size: 21px;
+
+            font-weight: 900;
+        }
+
+        .order-small {
+            background: #b91c1c;
+
+            color: white;
+
+            padding: 9px 13px;
+
+            border-radius: 7px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            max-width: 1050px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 55px;
+
+            align-items: center;
+        }
+
+        .about-image img {
+            height: 380px;
+
+            object-fit: cover;
+
+            border-radius: 20px;
+        }
+
+        .about-text small {
+            color: #b91c1c;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+        }
+
+        .about-text h2 {
+            font-size: 40px;
+
+            color: #451a03;
+
+            margin: 10px 0 18px;
+        }
+
+        .about-text p {
+            color: #765c48;
+
+            margin-bottom: 18px;
+        }
+
+        .check-list {
+            list-style: none;
+
+            margin-top: 20px;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+
+            font-weight: 700;
+        }
+
+        .check-list li::before {
+            content: "✓";
+
+            color: #b91c1c;
+
+            font-weight: 900;
+
+            margin-right: 10px;
+        }
+
+
+        /* =========================
+           WHY US
+        ========================= */
+
+        .features {
+            background: #fff7ed;
+        }
+
+        .feature-grid {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .feature-card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            border: 1px solid #f1dfca;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #451a03;
+
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: #765c48;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background:
+                linear-gradient(
+                    135deg,
+                    #7f1d1d,
+                    #b91c1c
+                );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 80px 7%;
+        }
+
+        .cta h2 {
+            font-size: 42px;
+
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            color: #fee2e2;
+
+            max-width: 600px;
+
+            margin: 0 auto 25px;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+
+            background: #25D366;
+
+            color: white;
+
+            padding: 15px 25px;
+
+            border-radius: 9px;
+
+            font-weight: 900;
+
+            transition: 0.3s;
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #fffaf3;
+
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 700px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 12px 35px
+                rgba(70, 40, 15, 0.10);
+        }
+
+        .contact-box h2 {
+            color: #451a03;
+
+            font-size: 35px;
+
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            color: #765c48;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #2b2118;
+
+            color: #d6c4b4;
+
+            text-align: center;
+
+            padding: 25px 7%;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FLOATING WHATSAPP
+        ========================= */
+
+        .floating-whatsapp {
+            position: fixed;
+
+            right: 20px;
+
+            bottom: 20px;
+
+            z-index: 2000;
+
+            background: #25D366;
+
+            color: white;
+
+            padding: 14px 18px;
+
+            border-radius: 50px;
+
+            font-weight: 900;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,0.22);
+
+            transition: 0.3s;
+        }
+
+        .floating-whatsapp:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                padding: 60px 5%;
+
+                text-align: center;
+
+                gap: 35px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .hero-image img {
+                height: 330px;
+            }
+
+            .menu-grid,
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+                height: 300px;
+            }
+
+            section {
+                padding: 65px 5%;
+            }
+
+            .section-title h2,
+            .about-text h2 {
+                font-size: 34px;
+            }
+
+            .cta h2 {
+                font-size: 34px;
+            }
+
+            .image-badge {
+                left: 15px;
+                bottom: 15px;
+            }
+
+            .floating-whatsapp {
+                right: 15px;
+                bottom: 15px;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-image img {
+                height: 270px;
+            }
+
+            .contact-box {
+                padding: 28px 20px;
+            }
+
+            .menu-card img {
+                height: 220px;
+            }
+
+            .floating-whatsapp {
+                padding: 12px 15px;
+
+                font-size: 14px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
-<header class="navbar">
-<div class="container nav">
-<a class="logo" href="#home">SAFFRON & SPICE<small>FINE INDIAN DINING</small></a>
-<button class="toggle" onclick="toggleMenu()" aria-label="Open menu">☰</button>
-<nav class="links" id="links">
-<a href="#home" onclick="closeMenu()">Home</a>
-<a href="#about" onclick="closeMenu()">About</a>
-<a href="#menu" onclick="closeMenu()">Menu</a>
-<a href="#gallery" onclick="closeMenu()">Gallery</a>
-<a href="#reviews" onclick="closeMenu()">Reviews</a>
-<a class="nav-cta" href="#contact" onclick="closeMenu()">Reserve a Table</a>
-</nav>
-</div>
-</header>
 
-<section class="hero" id="home">
-<div class="container hero-content">
-<div class="label">Authentic Indian Cuisine</div>
-<h1>Where Every Meal Becomes a Memory.</h1>
-<p>Experience bold Indian flavours, warm hospitality and beautifully crafted dishes in an elegant dining atmosphere.</p>
-<div class="buttons">
-<a class="btn gold" href="#menu">Explore Our Menu</a>
-<a class="btn outline" href="#contact">Reserve a Table</a>
-</div>
-</div>
-</section>
 
-<section id="about">
-<div class="container about">
-<img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1000&q=85" alt="Indian food">
-<div>
-<div class="label">Our Story</div>
-<h2>Tradition on Every Plate</h2>
-<p>Saffron & Spice brings together generations of Indian culinary tradition with a modern dining experience.</p>
-<p>From slow-cooked curries to fragrant biryanis and freshly baked breads, every dish is prepared with carefully selected ingredients and authentic spices.</p>
-<div class="signature">— The Saffron & Spice Family</div>
-</div>
-</div>
-</section>
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
-<section class="dark" id="menu">
-<div class="container">
-<div class="heading"><div class="label">Chef's Selection</div><h2>Our Signature Menu</h2><p>A few favourites from our kitchen, crafted to make your dining experience unforgettable.</p></div>
-<div class="menu-grid">
-<article class="card"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85" alt="Butter chicken"><div class="card-body"><div class="card-top"><h3>Royal Butter Chicken</h3><span class="price">₹420</span></div><p>Tender chicken simmered in a rich tomato, butter and aromatic spice sauce.</p></div></article>
-<article class="card"><img src="https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=900&q=85" alt="Biryani"><div class="card-body"><div class="card-top"><h3>Royal Dum Biryani</h3><span class="price">₹390</span></div><p>Fragrant basmati rice layered with spices and slow-cooked to perfection.</p></div></article>
-<article class="card"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85" alt="Samosa"><div class="card-body"><div class="card-top"><h3>Classic Samosa</h3><span class="price">₹160</span></div><p>Crispy pastry filled with seasoned potato, peas and fragrant herbs.</p></div></article>
-</div>
-</div>
-</section>
+    <nav>
 
-<section>
-<div class="container">
-<div class="heading"><div class="label">Why Saffron & Spice</div><h2>Made for Moments</h2></div>
-<div class="features">
-<div class="feature"><div class="icon">👨‍🍳</div><h3>Expert Chefs</h3><p>Traditional recipes prepared by passionate chefs.</p></div>
-<div class="feature"><div class="icon">🌿</div><h3>Fresh Ingredients</h3><p>Quality ingredients and freshly ground spices.</p></div>
-<div class="feature"><div class="icon">✨</div><h3>Elegant Ambience</h3><p>A beautiful setting for family dinners and celebrations.</p></div>
-</div>
-</div>
-</section>
+        <a href="#home" class="logo">
+            Spice<span>House</span>
+        </a>
 
-<section id="gallery">
-<div class="container">
-<div class="heading"><div class="label">A Taste of Saffron & Spice</div><h2>Our Gallery</h2><p>Good food deserves to look as beautiful as it tastes.</p></div>
-<div class="gallery">
-<div><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=85" alt="Restaurant interior"></div>
-<div><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=85" alt="Indian curry"></div>
-<div><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85" alt="Indian dish"></div>
-<div><img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=800&q=85" alt="Indian food"></div>
-</div>
-</div>
-</section>
+        <div class="nav-links">
 
-<section class="reviews" id="reviews">
-<div class="container">
-<div class="heading"><div class="label">Guest Reviews</div><h2>Loved by Our Guests</h2></div>
-<div class="review-grid">
-<div class="review"><div class="stars">★★★★★</div><p>“Beautiful ambience and incredible food. The biryani was absolutely delicious.”</p><strong>— Aarav M.</strong></div>
-<div class="review"><div class="stars">★★★★★</div><p>“A perfect place for a family dinner. Wonderful service and amazing flavours.”</p><strong>— Priya R.</strong></div>
-<div class="review"><div class="stars">★★★★★</div><p>“The food, presentation and atmosphere were all excellent. We will definitely return.”</p><strong>— Rohan K.</strong></div>
-</div>
-</div>
-</section>
+            <a href="#home">
+                Home
+            </a>
 
-<section class="cta">
-<div class="container">
-<h2>Your Table Is Waiting.</h2>
-<p>Planning a special dinner? Reserve your table and make your next meal memorable.</p>
-<a class="btn gold" href="#contact">Reserve a Table</a>
-</div>
-</section>
+            <a href="#menu">
+                Menu
+            </a>
 
-<section id="contact">
-<div class="container">
-<div class="heading"><div class="label">Visit Us</div><h2>Come Dine With Us</h2><p>We'd love to welcome you to Saffron & Spice.</p></div>
-<div class="contact-grid">
-<div class="contact"><h3>Restaurant Details</h3><div class="item"><strong>📍 Address</strong>123 MG Road, Bengaluru, Karnataka</div><div class="item"><strong>📞 Phone</strong>+91 98765 43210</div><div class="item"><strong>✉️ Email</strong>hello@saffronspice.example</div></div>
-<div class="contact"><h3>Opening Hours</h3><div class="item"><strong>Monday – Thursday</strong>12:00 PM – 10:30 PM</div><div class="item"><strong>Friday – Sunday</strong>12:00 PM – 11:30 PM</div><div class="item"><strong>Reservations</strong>Call us to reserve your table.</div><a class="btn gold" href="tel:+919876543210">Call to Reserve</a></div>
-</div>
-</div>
-</section>
+            <a href="#about">
+                About
+            </a>
 
-<footer><div class="container"><div class="logo">SAFFRON & SPICE</div><p>© 2026 Saffron & Spice. Demo website created for portfolio purposes.</p></div></footer>
+            <a href="#contact">
+                Contact
+            </a>
 
-<script>
-function toggleMenu(){document.getElementById('links').classList.toggle('open')}
-function closeMenu(){document.getElementById('links').classList.remove('open')}
-</script>
+            <a href="#contact" class="nav-button">
+                Order Now
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero" id="home">
+
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                AUTHENTIC INDIAN CUISINE
+            </div>
+
+            <h1>
+
+                Taste the
+
+                <span>
+                    Royal Biryani.
+                </span>
+
+            </h1>
+
+            <p>
+
+                Fragrant basmati rice, tender meat,
+                aromatic spices and generations of
+                authentic flavour — served fresh
+                at Spice House.
+
+            </p>
+
+
+            <div class="buttons">
+
+                <a
+                    href="#menu"
+                    class="button primary">
+
+                    Explore Menu
+
+                </a>
+
+                <a
+                    href="#contact"
+                    class="button secondary">
+
+                    Order Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BIRYANI IMAGE -->
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=1200&q=90"
+                alt="Delicious biryani served with rice and spices"
+                loading="eager"
+            >
+
+            <div class="image-badge">
+
+                ⭐ 4.9/5 Rating
+
+                <br>
+
+                <span>Customer Favourite</span>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         OFFER
+    ========================= -->
+
+    <div class="offer">
+
+        <strong>
+            🔥 Weekend Special:
+            <span>10% OFF</span>
+            on family biryani orders
+        </strong>
+
+    </div>
+
+
+
+    <!-- =========================
+         MENU
+    ========================= -->
+
+    <section class="menu" id="menu">
+
+
+        <div class="section-title">
+
+            <small>
+                OUR MENU
+            </small>
+
+            <h2>
+                Made Fresh. Served Hot.
+            </h2>
+
+            <p>
+                A selection of customer favourites
+                prepared with authentic Indian spices.
+            </p>
+
+        </div>
+
+
+
+        <div class="menu-grid">
+
+
+            <!-- CHICKEN BIRYANI -->
+
+            <div class="menu-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=900&q=85"
+                    alt="Chicken biryani"
+                    loading="lazy"
+                >
+
+                <div class="menu-info">
+
+                    <h3>
+                        Chicken Biryani
+                    </h3>
+
+                    <p>
+                        Aromatic basmati rice,
+                        tender chicken and traditional
+                        biryani spices.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="price">
+                            ₹249
+                        </span>
+
+                        <a
+                            href="https://wa.me/918548813585?text=Hello%20Zaid%2C%20I%20want%20to%20order%20Chicken%20Biryani."
+                            target="_blank"
+                            class="order-small">
+
+                            Order
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MUTTON BIRYANI -->
+
+            <div class="menu-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=85"
+                    alt="Mutton biryani"
+                    loading="lazy"
+                >
+
+                <div class="menu-info">
+
+                    <h3>
+                        Mutton Biryani
+                    </h3>
+
+                    <p>
+                        Slow-cooked tender mutton
+                        layered with fragrant basmati
+                        rice and spices.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="price">
+                            ₹329
+                        </span>
+
+                        <a
+                            href="https://wa.me/918548813585?text=Hello%20Zaid%2C%20I%20want%20to%20order%20Mutton%20Biryani."
+                            target="_blank"
+                            class="order-small">
+
+                            Order
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VEG BIRYANI -->
+
+            <div class="menu-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85"
+                    alt="Indian rice dish"
+                    loading="lazy"
+                >
+
+                <div class="menu-info">
+
+                    <h3>
+                        Veg Biryani
+                    </h3>
+
+                    <p>
+                        Seasonal vegetables,
+                        aromatic basmati rice and
+                        delicious Indian spices.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="price">
+                            ₹199
+                        </span>
+
+                        <a
+                            href="https://wa.me/918548813585?text=Hello%20Zaid%2C%20I%20want%20to%20order%20Veg%20Biryani."
+                            target="_blank"
+                            class="order-small">
+
+                            Order
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BUTTER CHICKEN -->
+
+            <div class="menu-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85"
+                    alt="Butter chicken"
+                    loading="lazy"
+                >
+
+                <div class="menu-info">
+
+                    <h3>
+                        Butter Chicken
+                    </h3>
+
+                    <p>
+                        Creamy tomato gravy,
+                        tender chicken and
+                        aromatic spices.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="price">
+                            ₹279
+                        </span>
+
+                        <a
+                            href="https://wa.me/918548813585?text=Hello%20Zaid%2C%20I%20want%20to%20order%20Butter%20Chicken."
+                            target="_blank"
+                            class="order-small">
+
+                            Order
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- KEBAB -->
+
+            <div class="menu-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85"
+                    alt="Indian kebab"
+                    loading="lazy"
+                >
+
+                <div class="menu-info">
+
+                    <h3>
+                        Chicken Kebab
+                    </h3>
+
+                    <p>
+                        Juicy grilled chicken
+                        marinated with herbs and
+                        traditional spices.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="price">
+                            ₹229
+                        </span>
+
+                        <a
+                            href="https://wa.me/918548813585?text=Hello%20Zaid%2C%20I%20want%20to%20order%20Chicken%20Kebab."
+                            target="_blank"
+                            class="order-small">
+
+                            Order
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DESSERT -->
+
+            <div class="menu-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
+                    alt="Indian dessert"
+                    loading="lazy"
+                >
+
+                <div class="menu-info">
+
+                    <h3>
+                        Special Dessert
+                    </h3>
+
+                    <p>
+                        Finish your meal with
+                        a delicious sweet treat.
+                    </p>
+
+                    <div class="menu-bottom">
+
+                        <span class="price">
+                            ₹149
+                        </span>
+
+                        <a
+                            href="https://wa.me/918548813585?text=Hello%20Zaid%2C%20I%20want%20to%20order%20the%20Special%20Dessert."
+                            target="_blank"
+                            class="order-small">
+
+                            Order
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="about" id="about">
+
+
+        <div class="about-grid">
+
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85"
+                    alt="Beautiful restaurant interior"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+
+            <div class="about-text">
+
+                <small>
+                    OUR STORY
+                </small>
+
+                <h2>
+                    Traditional Taste.
+                    Modern Experience.
+                </h2>
+
+                <p>
+
+                    At Spice House, we believe
+                    great food brings people together.
+
+                </p>
+
+                <p>
+
+                    Our recipes combine traditional
+                    Indian cooking techniques with
+                    fresh ingredients and carefully
+                    selected spices.
+
+                </p>
+
+
+                <ul class="check-list">
+
+                    <li>
+                        Fresh ingredients
+                    </li>
+
+                    <li>
+                        Authentic recipes
+                    </li>
+
+                    <li>
+                        Prepared fresh every day
+                    </li>
+
+                    <li>
+                        Family-friendly atmosphere
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FEATURES
+    ========================= -->
+
+    <section class="features">
+
+
+        <div class="section-title">
+
+            <small>
+                WHY SPICE HOUSE
+            </small>
+
+            <h2>
+                Good Food. Great Moments.
+            </h2>
+
+        </div>
+
+
+
+        <div class="feature-grid">
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🍛
+                </div>
+
+                <h3>
+                    Authentic Flavours
+                </h3>
+
+                <p>
+                    Traditional recipes made with
+                    carefully selected spices.
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🥘
+                </div>
+
+                <h3>
+                    Freshly Prepared
+                </h3>
+
+                <p>
+                    Every dish is prepared fresh
+                    for a delicious experience.
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Made With Love
+                </h3>
+
+                <p>
+                    Quality food and warm service
+                    for every customer.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+        <h2>
+            Hungry Yet?
+        </h2>
+
+        <p>
+            Order your favourite biryani and
+            enjoy authentic flavours today.
+        </p>
+
+        <a
+            href="https://wa.me/918548813585?text=Hello%20Zaid%2C%20I%20want%20to%20order%20from%20the%20Spice%20House%20demo."
+            target="_blank"
+            class="whatsapp-button">
+
+            💬 Order on WhatsApp
+
+        </a>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section class="contact" id="contact">
+
+
+        <div class="contact-box">
+
+            <h2>
+                Visit Spice House
+            </h2>
+
+            <p>
+                Want a website like this for your
+                restaurant? Contact ZaidWeb and
+                let's build it for your business.
+            </p>
+
+            <a
+                href="https://wa.me/918548813585?text=Hello%20Zaid%2C%20I%20saw%20your%20Spice%20House%20restaurant%20demo%20and%20I%20want%20a%20website%20for%20my%20business."
+                target="_blank"
+                class="button primary">
+
+                💬 Contact ZaidWeb
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            Spice House — Restaurant Website Demo
+        </p>
+
+        <p>
+            Website designed by ZaidWeb
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         FLOATING WHATSAPP
+    ========================= -->
+
+    <a
+        href="https://wa.me/918548813585?text=Hello%20Zaid%2C%20I%20saw%20your%20restaurant%20website%20demo."
+        target="_blank"
+        class="floating-whatsapp">
+
+        💬 WhatsApp
+
+    </a>
+
+
 </body>
+
 </html>
